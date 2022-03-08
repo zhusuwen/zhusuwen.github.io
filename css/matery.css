@@ -35,7 +35,11 @@
 
 body {
     background-color: #eaeaea;
+    
+    background: url('https://s1.ax1x.com/2022/03/08/bgjYy4.jpg')；
+    background-attachment: fixed;
     margin: 0;
+
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
@@ -241,7 +245,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #696969 0%, #575757 100%);
 }
 
 .text-color {
