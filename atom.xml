@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>樱桃会长成樱花树吗</title>
   
+  <subtitle>樱花树の季节</subtitle>
+  <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://zhusuwen.github.io/"/>
   <updated>2022-03-08T13:32:34.901Z</updated>
-  <id>http://example.com/</id>
+  <id>http://zhusuwen.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>樱桃会长成樱花树吗</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>my new post</title>
-    <link href="http://example.com/2022/03/08/my-new-post/"/>
-    <id>http://example.com/2022/03/08/my-new-post/</id>
+    <link href="http://zhusuwen.github.io/2022/03/08/my-new-post/"/>
+    <id>http://zhusuwen.github.io/2022/03/08/my-new-post/</id>
     <published>2022-03-08T13:32:34.000Z</published>
     <updated>2022-03-08T13:32:34.901Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/03/08/hello-world/"/>
-    <id>http://example.com/2022/03/08/hello-world/</id>
+    <link href="http://zhusuwen.github.io/2022/03/08/hello-world/"/>
+    <id>http://zhusuwen.github.io/2022/03/08/hello-world/</id>
     <published>2022-03-08T13:21:08.389Z</published>
     <updated>2022-03-08T13:21:08.389Z</updated>
     
