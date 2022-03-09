@@ -6,7 +6,7 @@
   <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhusuwen.github.io/"/>
-  <updated>2022-03-09T00:39:28.499Z</updated>
+  <updated>2022-03-09T00:50:22.097Z</updated>
   <id>http://zhusuwen.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计网Note</title>
+    <link href="http://zhusuwen.github.io/2022/03/09/%E8%AE%A1%E7%BD%91Note/"/>
+    <id>http://zhusuwen.github.io/2022/03/09/%E8%AE%A1%E7%BD%91Note/</id>
+    <published>2022-03-09T00:49:42.000Z</published>
+    <updated>2022-03-09T00:50:22.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章-计算机网络和因特网&quot;&gt;&lt;a href=&quot;#第一章-计算机网络和因特网&quot; class=&quot;headerlink&quot; title=&quot;第一章 计算机网络和因特网&quot;&gt;&lt;/a&gt;第一章 计算机网络和因特网&lt;/h1&gt;&lt;h2 id=&quot;什么是因特网&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="计网" scheme="http://zhusuwen.github.io/tags/%E8%AE%A1%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>osNote</title>
     <link href="http://zhusuwen.github.io/2022/03/09/osNote/"/>
     <id>http://zhusuwen.github.io/2022/03/09/osNote/</id>
     <published>2022-03-09T00:37:10.000Z</published>
-    <updated>2022-03-09T00:39:28.499Z</updated>
+    <updated>2022-03-09T00:48:05.771Z</updated>
     
     
       
@@ -35,60 +58,7 @@
     
     
     
-  </entry>
-  
-  <entry>
-    <title>操作系统笔记</title>
-    <link href="http://zhusuwen.github.io/2022/03/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/"/>
-    <id>http://zhusuwen.github.io/2022/03/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/</id>
-    <published>2022-03-09T00:19:28.000Z</published>
-    <updated>2022-03-09T00:34:08.103Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第一章-绪论&quot;&gt;&lt;a href=&quot;#第一章-绪论&quot; class=&quot;headerlink&quot; title=&quot;第一章 绪论&quot;&gt;&lt;/a&gt;第一章 绪论&lt;/h1&gt;&lt;h2 id=&quot;操作系统的定义和特性&quot;&gt;&lt;a href=&quot;#操作系统的定义和特性&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>my new post</title>
-    <link href="http://zhusuwen.github.io/2022/03/08/my-new-post/"/>
-    <id>http://zhusuwen.github.io/2022/03/08/my-new-post/</id>
-    <published>2022-03-08T13:32:34.000Z</published>
-    <updated>2022-03-08T13:32:34.901Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://zhusuwen.github.io/2022/03/08/hello-world/"/>
-    <id>http://zhusuwen.github.io/2022/03/08/hello-world/</id>
-    <published>2022-03-08T13:21:08.389Z</published>
-    <updated>2022-03-08T13:21:08.389Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
+    <category term="os" scheme="http://zhusuwen.github.io/tags/os/"/>
     
   </entry>
   
