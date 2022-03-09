@@ -6,7 +6,7 @@
   <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhusuwen.github.io/"/>
-  <updated>2022-03-09T00:34:08.103Z</updated>
+  <updated>2022-03-09T00:39:28.499Z</updated>
   <id>http://zhusuwen.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>osNote</title>
+    <link href="http://zhusuwen.github.io/2022/03/09/osNote/"/>
+    <id>http://zhusuwen.github.io/2022/03/09/osNote/</id>
+    <published>2022-03-09T00:37:10.000Z</published>
+    <updated>2022-03-09T00:39:28.499Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章-绪论&quot;&gt;&lt;a href=&quot;#第一章-绪论&quot; class=&quot;headerlink&quot; title=&quot;第一章 绪论&quot;&gt;&lt;/a&gt;第一章 绪论&lt;/h1&gt;&lt;h2 id=&quot;操作系统的定义和特性&quot;&gt;&lt;a href=&quot;#操作系统的定义和特性&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>操作系统笔记</title>
