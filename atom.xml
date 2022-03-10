@@ -6,7 +6,7 @@
   <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhusuwen.github.io/"/>
-  <updated>2022-03-09T00:55:41.273Z</updated>
+  <updated>2022-03-10T01:27:29.110Z</updated>
   <id>http://zhusuwen.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyNote</title>
+    <link href="http://zhusuwen.github.io/2022/03/10/pyNote/"/>
+    <id>http://zhusuwen.github.io/2022/03/10/pyNote/</id>
+    <published>2022-03-10T01:24:55.000Z</published>
+    <updated>2022-03-10T01:27:29.110Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-变量&quot;&gt;&lt;a href=&quot;#1-变量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://zhusuwen.github.io/categories/note/"/>
+    
+    
+    <category term="python" scheme="http://zhusuwen.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>计网Note</title>

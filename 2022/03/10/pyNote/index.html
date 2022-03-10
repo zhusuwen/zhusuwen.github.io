@@ -1,0 +1,2478 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="pyNote, 樱花树  |  信息安全">
+    <meta name="description" content="1.变量
+chr与ord函数
+变量实际是一个对象的引用
+print(r &#39; string &#39; )中的\会完整输出
+变量包括三个属性id(内存地址),type,value
+二进制前缀0b,八进制前缀0o,十六进制前缀0x
+转二进制函数bin(">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>pyNote | 樱桃会长成樱花树吗</title>
+    <link rel="icon" type="image/jpeg" href="https://s1.ax1x.com/2022/03/09/bRiaVO.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="樱桃会长成樱花树吗" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+ 
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">嘘~  正在从服务器偷取页面 . . . </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://s1.ax1x.com/2022/03/09/bRidaD.jpg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">樱桃会长成樱花树吗</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>媒体</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>电影</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书单</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://s1.ax1x.com/2022/03/09/bRidaD.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">樱桃会长成樱花树吗</div>
+        <div class="logo-desc">
+            
+            本科  |  信息安全
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			媒体
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>电影</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书单</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">pyNote</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/note/" class="post-category">
+                                note
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-03-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-03-10
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.9k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1.变量"></a>1.变量</h3><ul>
+<li><code>chr</code>与<code>ord</code>函数</li>
+<li>变量实际是一个<strong>对象的引用</strong></li>
+<li><code>print(r ' string ' )</code>中的<code>\</code>会完整输出</li>
+<li>变量包括三个属性<code>id(内存地址),type,value</code></li>
+<li>二进制前缀<code>0b</code>,八进制前缀<code>0o</code>,十六进制前缀<code>0x</code></li>
+<li>转二进制函数<code>bin()</code>，结果是字符串类型</li>
+<li>转八进制函数<code>oct()</code>，结果是字符串类型</li>
+<li>转十六进制函数<code>hex()</code>，结果是字符串类型</li>
+</ul>
+<h3 id="2-数据类型"><a href="#2-数据类型" class="headerlink" title="2.数据类型"></a>2.数据类型</h3><ul>
+<li>三引号<code>'''</code>或<code>"""</code>字符串可以<strong>多行显示</strong>，也可用来进行注释</li>
+<li><code>bool</code>类型可以化为整型</li>
+<li>类型转换：<code>str(),int(),float()</code></li>
+<li>一个变量的type属性可以变化：<code>a=int(a)</code></li>
+</ul>
+<h3 id="3-输入与运算符"><a href="#3-输入与运算符" class="headerlink" title="3.输入与运算符"></a>3.输入与运算符</h3><ul>
+<li><p><code>present=input("提示语句")</code>，运行结果是<strong>string类型</strong></p>
+</li>
+<li><p>算术运算符</p>
+<ul>
+<li>除法运算<code>/</code>（结果是<code>float</code>类型），<strong>整除</strong>运算<code>//</code>（<em>一正一负向下取整数</em>）</li>
+<li>取余运算<code>%</code></li>
+<li>幂运算<code>**</code></li>
+</ul>
+</li>
+<li><p>赋值运算符</p>
+<ul>
+<li><p>运算顺序从右到左</p>
+</li>
+<li><p>支持链式赋值<code>a=b=c=10</code>，三者<code>id</code>相同，即地址相同，亦即只创建了<strong>一个内存对象</strong></p>
+</li>
+<li><p>支持参数复制</p>
+</li>
+<li><p>支持系列解包复制</p>
+</li>
+<li><p><code>a,b,c=20,30,40</code>,创建了三个内存对象</p>
+</li>
+<li><p><code>a,b=b,a</code>,交换值</p>
+</li>
+</ul>
+</li>
+<li><p>比较运算符</p>
+<ul>
+<li>运算结果是<code>bool</code>类型</li>
+<li><code>==</code>比较的是<code>value</code></li>
+<li><code>is</code>与<code>is not</code>比较的是<code>id</code></li>
+</ul>
+</li>
+<li><p>布尔运算符</p>
+<ul>
+<li><code>and,or,not,in,not in</code></li>
+</ul>
+</li>
+<li><p>位运算符</p>
+<ul>
+<li><code>&amp;,|,&gt;&gt;,&lt;&lt;</code></li>
+</ul>
+</li>
+<li><p>运算符的优先级</p>
+<ul>
+<li>算术运算符——位运算符——比较运算符——布尔运算符——赋值运算符</li>
+<li>位运算符：&lt;&lt;,&gt;&gt;  &amp;  |</li>
+<li>布尔运算符：and  or</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-程序的组织结构"><a href="#4-程序的组织结构" class="headerlink" title="4.程序的组织结构"></a>4.程序的组织结构</h3><ul>
+<li><p>顺序结构，选择结构，循环结构</p>
+</li>
+<li><p><strong>python一切皆对象</strong>，所有对象皆有一个布尔值</p>
+<ul>
+<li>获取对象的布尔值，使用内置函数<code>bool()</code></li>
+<li>以下对象的布尔值为<code>false</code>，其他均为<code>true</code><ul>
+<li>False</li>
+<li>数值0</li>
+<li>None</li>
+<li>空字符串</li>
+<li>空列表</li>
+<li>空元组</li>
+<li>空字典</li>
+<li>空集合</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>选择结构</p>
+<ul>
+<li><code>if 条件表达式:</code></li>
+<li>多分支<code>if-elif</code></li>
+<li>条件表达式<code>90&lt;=num&lt;=100</code></li>
+<li><code>print((num_a,'大于等于',num_b)  if num_a&gt;=num_b else  (num_a,'小于',num_b))</code><ul>
+<li>如果是true则输出前面内容，是false则输出后面内容</li>
+</ul>
+</li>
+<li><code>pass</code>什么都不做，只是一个占位符</li>
+</ul>
+</li>
+<li><p>循环结构</p>
+<ul>
+<li>内置函数range<ul>
+<li>用于生成一个整数序列<code>(range对象)</code>，迭代器</li>
+<li>创建range对象三种方式<ol>
+<li><code>range(stop)</code>创建一个<code>(0,stop)</code>之间的整数序列，步长为1</li>
+<li><code>range(start,stop)</code></li>
+<li><code>range(start,stop,step)</code></li>
+<li><code>print(list(r))</code>用于查看range对象中的整数序列</li>
+</ol>
+</li>
+<li>range对象的优点：只<strong>存储三个值</strong>，占用内存空间较少，只有当用到range对象时，才回去计算序列中的相关元素</li>
+</ul>
+</li>
+<li><code>while</code>循环<ul>
+<li><code>while 条件表达式:</code></li>
+</ul>
+</li>
+<li><code>for-in</code>循环<ul>
+<li><code>for i in 可迭代对象:</code></li>
+<li>如果在循环体中不需要使用自定义变量，可将自定义变量写为<code>_</code></li>
+</ul>
+</li>
+<li><code>else与for和while</code><ul>
+<li><code>for与while</code>正常执行完毕退出后执行<code>else</code>语句，但当遇到<code>break</code>时，不执行<code>else</code>语句</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-列表"><a href="#5-列表" class="headerlink" title="5.列表"></a>5.列表</h3><ul>
+<li><p>列表相当于其他语言中的数组，可对其中的数据进行整体操作</p>
+</li>
+<li><p><code>lst=['hello','world',98]</code></p>
+</li>
+<li><p>列表是n多个<strong>引用</strong>，存储的是<strong>对象的引用</strong>，即对象的<code>id</code>，上述列表的的三个引用指向列表对象</p>
+</li>
+<li><p>列表的创建：</p>
+<ul>
+<li>使用中括号<code>[]</code></li>
+<li>使用内置函数<code>list([])</code></li>
+</ul>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210615173908965.png"></p>
+</li>
+<li><p>列表的特点：</p>
+<ul>
+<li>列表元素按照顺序有序排列</li>
+<li>索引映射唯一的一个元素</li>
+<li>可以存储相同数据</li>
+<li><strong>任意数据类型</strong></li>
+<li>根据需要动态分配回收内存，不用担心多和不够用</li>
+</ul>
+</li>
+<li><p>列表的操作</p>
+<ul>
+<li><p><code>lst.index()</code>,获取列表中元素的<strong>索引</strong></p>
+<ul>
+<li>如果有相同元素返回较小的索引</li>
+<li><code>lst.index(element,a,b)</code>,在指定的**[a,b)**中查找元素的索引</li>
+</ul>
+</li>
+<li><p>获取列表的多个元素——切片</p>
+<ul>
+<li><code>lst[a:b:c]</code>,切片是一个<strong>新的列表对象</strong>，从a开始到b结束，步长为c</li>
+<li>步长为负数时，逆序输出，<code>start</code>从末尾开始，<code>stop</code>从开头开始</li>
+</ul>
+</li>
+<li><p>判断指定元素在列表是否存在</p>
+<ul>
+<li><code>in与not in</code></li>
+</ul>
+</li>
+<li><p>列表元素的<strong>增删改</strong></p>
+<ul>
+<li><p>——<strong>增加</strong></p>
+</li>
+<li><p><code>list.append()</code>在列表的末尾添加一个元素</p>
+</li>
+<li><p><code>lst.append(lst2)</code>是将<code>lst2</code>作为<strong>一个元素</strong>添加</p>
+</li>
+<li><p><code>lst.extend(lst2)</code>将<code>lst2</code>中的元素追加到<code>lst</code>中</p>
+</li>
+<li><p><code>lst.insert(a,b)</code>在a位置<strong>添加</strong>一个元素b</p>
+</li>
+<li><p><code>lst[a:]=lst2</code>将<code>lst[a:]</code>部分<strong>替换</strong>为<code>lst2</code></p>
+</li>
+<li><p>——<strong>删除</strong></p>
+</li>
+<li><p><code>lst.remove(elemrnt)</code>在列表中移除元素<code>element</code>,多个元素只移除<strong>一个</strong></p>
+</li>
+<li><p><code>lst.pop(index)</code>根据<strong>索引</strong>移除元素，若不指定索引则删除<strong>最后一个</strong>元素</p>
+</li>
+<li><p><code>lst[a:b]=[]</code>用空列表替代，<strong>删除多个</strong>元素</p>
+</li>
+<li><p><code>lst.clear()</code>清除列表中的所有元素</p>
+</li>
+<li><p><code>del lst</code>删除<code>lst</code></p>
+</li>
+<li><p>——<strong>修改</strong></p>
+</li>
+<li><p>通过索引修改</p>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210616105710293.png"></p>
+</li>
+<li><p><code>lst[a:]=lst2</code>将<code>lst[a:]</code>部分替换为<code>lst2</code></p>
+</li>
+</ul>
+</li>
+<li><p>列表的<strong>排序操作</strong></p>
+<ul>
+<li><p><code>lst.sort()</code>,升序排序</p>
+<ul>
+<li><p><code>list.sort(cmp=None,key=None,reverse=False)</code></p>
+</li>
+<li><p><code>cmp</code>可选参数，如果指定了该参数会使用该参数的方法进行排序</p>
+</li>
+<li><p><code>key</code>主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序</p>
+<ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#获取列表的第二个元素</span>
+<span class="token keyword">def</span> <span class="token function">takeSecond</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> elem<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">#列表</span>
+random<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">#指定第二个元素排序</span>
+random<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>takeSecond<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#输出类别</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>random<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>上例中的<code>takeSecond()</code>常用<code>lambda</code>函数实现</p>
+</li>
+<li><pre class=" language-python"><code class="language-python">takeSecond <span class="token operator">=</span> <span class="token keyword">lambda</span> elem <span class="token punctuation">:</span> elem<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>lst.sort(reverse=True)</code>,降序排序</p>
+</li>
+<li><p><code>lst.sorted()</code>,产生一个新的列表对象</p>
+</li>
+</ul>
+</li>
+<li><p>列表<strong>生成式</strong></p>
+<ul>
+<li>即生成列表的公式</li>
+<li><code>lst=[f(i) for i in range(1,10)]</code>,则列表中的元素是<code>f(i)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><ul>
+<li><p>字典是python内置的数据结构之一，与列表一样是一个<strong>可变序列</strong>，以<code>{}</code>表示，以<strong>键-值对</strong>方式存储数据</p>
+</li>
+<li><p>列表是一个<strong>有序</strong>的序列，字典是一个<strong>无序</strong>序列，位置由hash决定</p>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210616111226484.png"></p>
+</li>
+<li><p>放在字典中的<strong>键</strong>必须是<strong>不可变序列</strong>(如字符串,整数)，即不可进行增删改操作</p>
+</li>
+<li><p>字典的创建</p>
+<ul>
+<li><code>scores={'张三':100,'李四':80}</code></li>
+<li>使用内置函数<code>dict()</code>,<code>stduent=dict('name'='jack','age'=20)</code></li>
+</ul>
+</li>
+<li><p>字典中元素的获取</p>
+<ul>
+<li><p><strong>尽量使用<code>get</code>函数</strong></p>
+</li>
+<li><p><code>scores['张三']</code></p>
+</li>
+<li><p>使用内置函数<code>get()</code>,<code>scores.get('张三')</code></p>
+</li>
+<li><p>索引查找不存在时报错，<code>get()</code>函数查找不存在时返回none或默认值<code>scores.get('陈六'，00)</code>，其中<code>00</code>即是默认值</p>
+</li>
+</ul>
+</li>
+<li><p>字典的<strong>增删改</strong></p>
+<ul>
+<li>键的判断：<code>in或not in</code></li>
+<li>键值对的<strong>删除</strong>：<code>del scores['张三']</code></li>
+<li>字典的清空：<code>dict.clear()</code></li>
+<li>键值对的<strong>添加或修改</strong>：<code>dict['陈六']=50</code></li>
+</ul>
+</li>
+<li><p>获取字典的<strong>视图</strong></p>
+<ul>
+<li>获取字典中所有的<strong>key</strong>：<code>dict.key()</code></li>
+<li>获取字典中所有的<strong>value</strong>：<code>dict.value()</code></li>
+<li>获取字典中所有<strong>键值对</strong>：<code>dict.items()</code></li>
+<li>上述函数返回的是<code>dict_key</code>,<code>dict_values</code>,<code>dict_items</code>类型，一般要进行<code>list()</code>转换</li>
+</ul>
+</li>
+<li><p>字典元素的遍历</p>
+<ul>
+<li><code>for item in dict: print(item,dict[item])</code></li>
+</ul>
+</li>
+<li><p>字典的总结_特点</p>
+<ul>
+<li>键不允许重复，否则会覆盖，值可以重复</li>
+<li>字典中的元素是无序的</li>
+<li>字典会浪费<strong>大量的内存</strong>，是用空间换时间</li>
+</ul>
+</li>
+<li><p>字典<strong>生成式</strong></p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210616113751414.png"></li>
+<li><img src="/2022/03/10/pyNote/image-20210616114021529.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="元组与集合"><a href="#元组与集合" class="headerlink" title="元组与集合"></a>元组与集合</h3><h4 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h4><ul>
+<li>元组是python内置的数据结构之一，属于<strong>不可变序列</strong>，其他与<code>list</code>类似</li>
+<li>元组的创建方式<ul>
+<li>使用<code>()</code>:<code>t=('python','world',98)</code></li>
+<li>使用内置函数<code>tuple</code>:<code>t=tuple(('python','world',98))</code></li>
+<li>元组只有一个元素时要加上<code>,</code></li>
+</ul>
+</li>
+<li>元组设计成不可变序列的原因<ul>
+<li>在多任务环境下，同时操作对象时不需要加锁</li>
+<li><img src="/2022/03/10/pyNote/image-20210616115917434.png"></li>
+</ul>
+</li>
+<li>元组的遍历<ul>
+<li>使用索引获取</li>
+<li>使用<code>for</code>循环遍历</li>
+</ul>
+</li>
+</ul>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><ul>
+<li>集合是python语言提供的内置数据结构，输入<strong>可变类型序列</strong>，支持增删改操作</li>
+<li>集合是没有value的字典，底层函数也使用了hash表，集合同样不允许重复，元素无序</li>
+<li>集合的创建<ul>
+<li><code>s={'a','b'}</code></li>
+<li>内置函数<code>set()</code>：<code>set(range(6))</code></li>
+<li>空集合：<code>s=set{}</code></li>
+<li><img src="/2022/03/10/pyNote/image-20210616121405740.png"></li>
+</ul>
+</li>
+<li>集合的相关操作<ul>
+<li>判断存在：<code>in和not in</code></li>
+<li>集合元素的<strong>新增</strong>操作<ul>
+<li><code>s.add(element)</code>,添加元素<code>element</code></li>
+<li><code>s.update()</code>,括号中可以放一个<strong>集合，列表，元组</strong></li>
+</ul>
+</li>
+<li>集合元素的<strong>删除</strong>操作<ul>
+<li><code>s.remove(element)</code>,删除元素<code>element</code>，元素不存在会抛异常</li>
+<li><code>s.descard(element)</code>,删除元素<code>element</code>，元素不存在不会抛异常</li>
+<li><code>s.pop()</code>,任意删除一个元素</li>
+<li><code>s.clear()</code>,清除所有元素</li>
+</ul>
+</li>
+<li>集合之间的关系<ul>
+<li>判断集合相等：<code>==</code>&amp;<code>！=</code></li>
+<li>判断子集：<code>s.issubset(s2)</code>，判断<code>s</code>是否是<code>s2</code>的子集</li>
+<li>判断超集：<code>s.issuperset(s2)</code></li>
+<li>判断交集：<code>s.isdisjoint(s2)</code></li>
+</ul>
+</li>
+<li>集合的数据操作<ul>
+<li>交集：<code>s1.intersection(s2)</code>,或<code>s1 &amp; s2</code></li>
+<li>并集：<code>s1.union(s2)</code>,或<code>s1 | s2</code></li>
+<li>差集：<code>s1.difference(s2)</code>,或<code>s1-s2</code></li>
+<li>对称差集：<code>s1.symmetric_difference(s2)</code>,或<code>s1^ s2</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>集合生成式<ul>
+<li><code>set={f(i) for i in range(num)}</code>,类似于列表生成式</li>
+</ul>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/2022/03/10/pyNote/image-20210617165619295.png"></p>
+<h3 id="6-字符串"><a href="#6-字符串" class="headerlink" title="6.字符串"></a>6.字符串</h3><ul>
+<li>字符串是python中的基本数据类型，是一个<strong>不可变序列</strong></li>
+<li>字符串<strong>驻留机制</strong><ul>
+<li>仅保存一份相同且不可变字符串的方法，不同的值被保存在字符串的贮留池中，python的驻留机制对<strong>相同的字符串</strong>只<strong>保留一份拷贝</strong>，后续创建相同字符串时，不会开辟新的空间，而是把该字符串的地址赋给新创建的变量</li>
+<li>驻留机制的几种情况(交互模式)</li>
+<li><code>pycharm</code>对字符串优化处理</li>
+</ul>
+</li>
+<li>字符串的<strong>查询操作</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617171751958.png"></li>
+<li>尽量使用<code>find</code>方法</li>
+</ul>
+</li>
+<li>字符串的<strong>大小写转换</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617172220145.png"></li>
+<li>转换会产生一个<strong>新的字符串对象</strong></li>
+</ul>
+</li>
+<li>字符串的<strong>内容对齐操作</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617172644369.png"></li>
+</ul>
+</li>
+<li>字符串的<strong>分割操作</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617173118651.png"></li>
+</ul>
+</li>
+<li>字符串的<strong>判断操作</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617173648887.png"></li>
+</ul>
+</li>
+<li>字符串的<strong>替换与合并</strong><ul>
+<li><img src="/2022/03/10/pyNote/image-20210617174149550.png"></li>
+<li><code>pritn('x'.join(lst))</code>,x是字符串的连接符</li>
+<li><code>print('*'.join('python'))</code>的结果是<code>p*y*t*h*o*n</code></li>
+</ul>
+</li>
+<li>字符串的<strong>比较操作</strong><ul>
+<li>运算符<code>&gt;,&gt;=,&lt;,&lt;=,==,!=</code></li>
+<li>比较规则：有限比较两个字符串的第一个字符，如果相等则继续比较下一个字符，依次比较下去，知道两个字符串中的字符不相等时，其比较结果就是两个字符串的比较结果，两个字符串中的所有后续字符将不再被比较</li>
+</ul>
+</li>
+<li>字符串的<strong>切片操作</strong><ul>
+<li>切片后产生<strong>新的对象</strong></li>
+<li><img src="/2022/03/10/pyNote/image-20210617175552171.png"></li>
+<li>完整写法<code>s[statr:stop:step]</code></li>
+<li>与列表的切片类似</li>
+<li>当<code>step</code>是负数时会反序输出</li>
+</ul>
+</li>
+<li><strong>格式化字符串</strong>(print)<ul>
+<li>原因：字符串中有些东西可变，有些东西不可变</li>
+<li><img src="/2022/03/10/pyNote/image-20210617180619431.png"></li>
+<li><img src="/2022/03/10/pyNote/image-20210617180632017.png"></li>
+<li><strong><code>format</code>字符串格式化，可以把<code>format</code>中的内容，放入到字符串指定位置</strong></li>
+<li>第一种方式的精度与宽度设置类似于C语言</li>
+<li>第二种：<img src="/2022/03/10/pyNote/image-20210617181113530.png"></li>
+</ul>
+</li>
+<li>字符串的<strong>编码转换</strong><ul>
+<li>编码：将字符串 转换为二进制数据(<code>bytes</code>)</li>
+<li>解码：将<code>bytes</code>类型的数据转换成字符串类型</li>
+<li>编码：<code>s.encode(encoding='GBK/UTF-8')</code></li>
+<li>解码：<code>byte.decode(encoding='GBK/UTF-8')</code>,<code>byte</code>是编码出的二进制数据</li>
+</ul>
+</li>
+<li>总结<ul>
+<li><img src="/2022/03/10/pyNote/image-20210617182031869.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="7-函数"><a href="#7-函数" class="headerlink" title="7.函数"></a>7.函数</h3><ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> 函数名<span class="token punctuation">(</span><span class="token punctuation">[</span>输入参数<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    函数体
+    <span class="token punctuation">[</span><span class="token keyword">return</span> xxx<span class="token punctuation">]</span>
+</code></pre>
+</li>
+<li><p>输入参数可以通过<code>形参=实参</code>进行指定</p>
+</li>
+<li><p><strong>可变类型变量</strong>和<strong>不可变类型变量</strong>传入函数后，前者可直接对实参修改，后者不可对实参修改</p>
+</li>
+<li><p>函数返回<strong>多个值</strong>时，结果是<strong>元组</strong></p>
+</li>
+<li><p>函数定义时，给<strong>形参设置默认值</strong>，只有与默认值不符的时候才需要传递</p>
+</li>
+<li><p>定义参数时，可能无法事先确定传递的位置实参的个数</p>
+<ul>
+<li>使用可变的<strong>位置参数</strong>，使用<code>*</code>定义个数可变的位置形参，结果为一个<strong>元组</strong>，只能定义一个</li>
+<li><img src="/2022/03/10/pyNote/image-20210620112447503.png"></li>
+<li>使用可变的<strong>关键字形参</strong>，使用<code>**</code>定义个数可变的关键字传参，结果为一个<strong>字典</strong>，只能定义一个</li>
+<li><img src="/2022/03/10/pyNote/image-20210620112506753.png"></li>
+<li>两者均出现时，要先写位置参数，再写关键字形参</li>
+<li><img src="/2022/03/10/pyNote/image-20210620113357045.png"></li>
+<li><code>def fun(a,b,*,c,d)</code>在<code>*</code>之后只能采用关键字传参</li>
+</ul>
+</li>
+<li><p>函数参数总结</p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210620113432195.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="8-Bug"><a href="#8-Bug" class="headerlink" title="8.Bug"></a>8.<code>Bug</code></h3><ul>
+<li><p>如果没有异常处理机制，则<code>bug</code>由<code>python</code>自己捕获，如果有异常处理机制，则<code>bug</code>由处理机制捕获</p>
+</li>
+<li><p><code>python</code> 的异常处理机制<code>try-except</code></p>
+<ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>可能出现异常的代码
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">except</span> xxx<span class="token punctuation">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">except</span> yyy<span class="token punctuation">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+</li>
+<li><p><code>xxx</code>是捕获的异常</p>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210620120525852.png"></p>
+</li>
+</ul>
+</li>
+<li><p><code>python</code>异常处理机制<code>try-except-else</code></p>
+<ul>
+<li>如果<code>try</code>块中没有抛出异常，则执行<code>else</code>块，如果<code>try</code>中抛出异常，则执行<code>except</code>块</li>
+<li><img src="/2022/03/10/pyNote/image-20210620120939095.png"></li>
+</ul>
+</li>
+<li><p><code>python</code>异常处理机制<code>try-except-else-finally</code></p>
+<ul>
+<li><code>finally</code>块无论是否发生异常都会被执行，常用来释放<code>try</code>块中申请的资源</li>
+<li><img src="/2022/03/10/pyNote/image-20210620121109546.png"></li>
+</ul>
+</li>
+<li><p><code>python</code>的常见的<strong>异常类型</strong></p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210620121253682.png"></li>
+</ul>
+</li>
+<li><p><code>traceback</code>模块</p>
+<ul>
+<li>使用<code>traceback</code>模块打印异常信息</li>
+</ul>
+</li>
+<li><p><code>raise</code>手动抛出异常</p>
+<ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    score<span class="token operator">=</span>int<span class="token punctuation">(</span>input<span class="token punctuation">(</span><span class="token string">'请输入分数'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token number">0</span><span class="token operator">&lt;=</span>score<span class="token operator">&lt;=</span><span class="token number">100</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'分数为'</span><span class="token punctuation">,</span>score<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'分数不正确'</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-类与对象"><a href="#9-类与对象" class="headerlink" title="9.类与对象"></a>9.类与对象</h3><ul>
+<li><p>类的创建</p>
+<ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">:</span><span class="token punctuation">(</span>首字母大写<span class="token punctuation">)</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>类的<strong>组成</strong></p>
+<ul>
+<li>类属性</li>
+<li>实例属性</li>
+<li>实例方法</li>
+<li>静态方法<code>@staticmethod</code></li>
+<li>类方法<code>@classmethod</code></li>
+<li><img src="/2022/03/10/pyNote/image-20210621160622538.png"></li>
+<li><code>def</code>在类之内定义的称为方法，在类之外的称为函数</li>
+</ul>
+</li>
+<li><p>对象(实例)的创建</p>
+<ul>
+<li><code>实例名=类名()</code></li>
+<li><img src="/2022/03/10/pyNote/image-20210621161935674.png"></li>
+<li><img src="/2022/03/10/pyNote/image-20210621161952532.png"></li>
+</ul>
+</li>
+<li><p>类属性，类方法与静态方法</p>
+<ul>
+<li><p><code>dir()</code>内置函数查看<strong>类对象</strong>的<strong>属性和方法</strong></p>
+</li>
+<li><p>类属性</p>
+<ul>
+<li><p>对应于实例属性</p>
+</li>
+<li><p>类属性存储在<strong>类对象</strong>中，如果改变则所有实例对象的类属性都会同时更改，即<strong>被该类的所有对象所共享</strong></p>
+</li>
+<li><p>实例对象通过<strong>类指针</strong>访问类属性</p>
+</li>
+</ul>
+</li>
+<li><p>类方法</p>
+<ul>
+<li>对应于实例方法</li>
+<li>使用类名直接访问</li>
+</ul>
+</li>
+<li><p>静态方法</p>
+<ul>
+<li>使用类名直接访问</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>动态绑定属性和方法</strong></p>
+<ul>
+<li><p><code>python</code>语言是动态语言，在创建对象后，可以动态的绑定属性和方法</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'我是一函数'</span><span class="token punctuation">)</span>
+    
+stu<span class="token operator">=</span>Student<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span>
+stu<span class="token punctuation">.</span>gender<span class="token operator">=</span><span class="token string">'男'</span> <span class="token comment" spellcheck="true"># 动态绑定性别</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>stu<span class="token punctuation">.</span>name<span class="token punctuation">,</span>stu<span class="token punctuation">.</span>age<span class="token punctuation">,</span>stu<span class="token punctuation">.</span>gender<span class="token punctuation">)</span>
+stu<span class="token punctuation">.</span>show<span class="token operator">=</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 动态绑定方法</span>
+stu<span class="token punctuation">.</span>show
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-面向对象"><a href="#10-面向对象" class="headerlink" title="10.面向对象"></a>10.面向对象</h3><ul>
+<li><p>面向对象的三大特征</p>
+<ul>
+<li><p><strong>封装</strong>：提高程序的安全性</p>
+<ul>
+<li><p>将数据(属性)和行为(方法)包装到类对象中。在方法内部对属性进行操作，在类对象的外部调用方法。这样，无需关心方法内部的具体实现细节，从而隔离了复杂度</p>
+</li>
+<li><p>在<code>python</code>中没有专门的修饰符用于属性的私有，如果该属性不希望在类对象外部被访问，前边使用两个<code>_</code></p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name<span class="token operator">=</span>name
+        self<span class="token punctuation">.</span>__age<span class="token operator">=</span>age <span class="token comment" spellcheck="true"># 年龄不希望在类的外部被直接使用</span>
+    <span class="token keyword">def</span> <span class="token function">show</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span>self<span class="token punctuation">.</span>__age<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>强迫访问<code>print(stu._Student__age)</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>继承</strong>：提高代码的复用性</p>
+<ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> 子类类名<span class="token punctuation">(</span>父类<span class="token number">1</span>，父类<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+</li>
+<li><p>如何一个类没有继承任何类，则默认继承<code>object</code></p>
+</li>
+<li><p><code>python</code>支持多继承</p>
+</li>
+<li><p>定义子类时，必须在其<strong>构造函数</strong>中调用父类的构造函数</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name<span class="token operator">=</span>name
+        self<span class="token punctuation">.</span>age<span class="token operator">=</span>age
+    <span class="token keyword">def</span> <span class="token function">info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'姓名:{0},年龄:{1}'</span><span class="token punctuation">,</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span>self<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 定义子类</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>score<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        super<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 调用父类的构造函数</span>
+        self<span class="token punctuation">.</span>score<span class="token operator">=</span>score
+<span class="token comment" spellcheck="true"># 测试</span>
+stu<span class="token operator">=</span>Student<span class="token punctuation">(</span><span class="token string">'Jack'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token string">'100'</span><span class="token punctuation">)</span>
+stu<span class="token punctuation">.</span>info
+</code></pre>
+</li>
+<li><p>方法重写</p>
+<ul>
+<li>如果子类对继承自父类的某个属性或方法不满意，可以在子类中对其进行重新编写</li>
+<li>子类重写的方法中可以通过<code>super().xxx()</code>调用父类中被重写的方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>多态</strong>：提高程序的可扩展性和可维护性。动态语言多崇尚“鸭子类型”，当一只鸟走起来像鸭子、游泳起来像鸭子，那么这只鸟就可以被称为鸭子，不关心对象的类型只关心对象的行为。</p>
+<ul>
+<li><p>简单的说，多态就是“具有多种形态”，它指的是：即便不知道一个变量所引用的对象到底是什么类型，仍然可以同个这个变量调用方法，在运行过程中根据变量所引用对象的类型，动态决定调用哪个对象中的方法</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'动物要吃肉'</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span>Animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'狗吃肉'</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span>Animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'猫吃鱼'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">eat</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'人吃五谷杂粮'</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210713091327080.png"></p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fun</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    obj<span class="token punctuation">.</span>eat<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   
+fun<span class="token punctuation">(</span>Dog<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+fun<span class="token punctuation">(</span>Cat<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+fun<span class="token punctuation">(</span>Person<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>三种调用方法均不报错，判断条件只是<strong>调用的对象是否有eat()方法</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>object</code>类</p>
+<ul>
+<li><p><code>print(stu)</code>调用的是<code>object</code>父类中的<code>__str__()</code>方法，可以对其进行重写来改变<code>print(stu)</code>的输出</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">'我的名字是{0},今年{1}岁'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span>self<span class="token punctuation">,</span>age<span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>特殊的属性</p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210713152605346.png"></li>
+<li><code>x.__class__</code>输出对象的所属的类</li>
+<li><code>C.__bases__</code>输出C的父类</li>
+<li><code>C.__base__</code>输出第一个父类</li>
+<li><code>C.__mro__</code>输出类的层次结构</li>
+<li><code>A.__subclasses__</code>输出所有子类</li>
+</ul>
+</li>
+<li><p>特殊的方法</p>
+<ul>
+<li>类当中的<code>__add__()</code>方法相当于<code>+</code></li>
+<li>类当中的<code>__len__()</code>方法相当于<code>len()</code></li>
+</ul>
+</li>
+<li><p><code>__init__()</code>和<code>__new__()</code></p>
+<ul>
+<li><code>__init__()</code>方法用于初始化</li>
+<li><code>__new__()</code>方法用于创建对象</li>
+<li><img src="/2022/03/10/pyNote/image-20210713155538726.png"></li>
+</ul>
+</li>
+<li><p>类的赋值和浅拷贝</p>
+<ul>
+<li><p>类的赋值操作，使得两个对象<code>id</code>相同</p>
+</li>
+<li><p><code>python</code>拷贝一般都是<strong>浅拷贝</strong>，拷贝时对象包含的子对象内容不拷贝，因此源对象与拷贝对象会引用同一个子对象</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">CPU</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+<span class="token keyword">class</span> <span class="token class-name">Disk</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+<span class="token keyword">class</span> <span class="token class-name">Computer</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>cpu<span class="token punctuation">,</span>disk<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>cpu<span class="token operator">=</span>cpu
+        self<span class="token punctuation">.</span>disk<span class="token operator">=</span>disk
+
+cpu1<span class="token operator">=</span>CPU<span class="token punctuation">(</span><span class="token punctuation">)</span>
+disk<span class="token operator">=</span>Disk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+computer<span class="token operator">=</span>Computer<span class="token punctuation">(</span>cpu1<span class="token punctuation">,</span>disk<span class="token punctuation">)</span>
+
+<span class="token keyword">import</span> copy
+computer2<span class="token operator">=</span>copy<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>computer<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>computer<span class="token punctuation">,</span>computer<span class="token punctuation">.</span>cpu<span class="token punctuation">,</span>computer<span class="token punctuation">.</span>disk<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>computer2<span class="token punctuation">,</span>computer2<span class="token punctuation">.</span>cpu<span class="token punctuation">,</span>computer2<span class="token punctuation">.</span>disk<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>其中<code>computer</code>和<code>computer2</code>指向的子对象都是<code>cpu1</code>和<code>disk</code></p>
+</li>
+</ul>
+</li>
+<li><p>深拷贝</p>
+<ul>
+<li>使用<code>copy</code>模块的<code>deepcopy</code>函数，递归拷贝对象中包含的子对象，源对象和拷贝对象对所有的子对象也不相同</li>
+</ul>
+</li>
+<li><p>总结</p>
+<p><img src="/2022/03/10/pyNote/image-20210714163638092.png"></p>
+</li>
+</ul>
+<h3 id="11-模块"><a href="#11-模块" class="headerlink" title="11.模块"></a>11.模块</h3><ul>
+<li><p>一个<code>.py</code>文件就是一个模块</p>
+</li>
+<li><p>将一个<code>python</code>程序分成几个模块开发</p>
+</li>
+<li><p>使用模块的好处</p>
+<ul>
+<li>方便其他程序和脚本的导入并使用</li>
+<li>避免函数名和变量名的冲突</li>
+<li>提高代码的可维护性</li>
+<li>提高代码的可重用性</li>
+</ul>
+</li>
+<li><p>自定义模块</p>
+<ul>
+<li>创建模块<ul>
+<li>新建一个<code>.py</code>文件，名称尽量不要与<code>python</code>自带的标准模块名称相同</li>
+</ul>
+</li>
+<li>导入模块<ul>
+<li><code>import 模块名称 [as 别名]</code></li>
+<li><code>from 模块名称 import 包/模块/函数/变量/类</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>以主程序(以主函数)形式运行</p>
+<ul>
+<li><p>导入自定义包的时候，会执行导入包的程序内容</p>
+</li>
+<li><p>使用</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+<p>后，当此包被导入后不会执行程序(即pass的内容)。</p>
+</li>
+</ul>
+</li>
+<li><p><code>python</code>中的包</p>
+<ul>
+<li>包是一个分层次的目录结构，它将一组功能相近的模块组织在一个目录下</li>
+<li>作用<ul>
+<li>代码规范</li>
+<li>避免<strong>模块名称</strong>冲突</li>
+</ul>
+</li>
+<li>包与目录的区别<ul>
+<li>包含<code>__init__.py</code>文件的目录称为包</li>
+<li>目录里通常不包含<code>__init__.py</code>文件</li>
+</ul>
+</li>
+<li>包的导入<ul>
+<li><code>import 包名.模块名</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>python</code>中常用的内置模块</p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210714173226452.png"></li>
+</ul>
+</li>
+<li><p><strong>第三方模块</strong>的安装与使用</p>
+<ul>
+<li><code>cmd</code>界面<code>pip install 模块名</code></li>
+<li><code>impot 模块名</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="12-文件操作"><a href="#12-文件操作" class="headerlink" title="12.文件操作"></a>12.文件操作</h3><ul>
+<li><p>编码格式</p>
+<ul>
+<li>常见的字符编码格式<ul>
+<li><code>python</code>的解释器使用的事<code>Unicode</code>(内存)</li>
+<li><code>.py</code>文件在磁盘上使用<code>UTF-8</code>存储(外存)</li>
+<li><img src="/2022/03/10/pyNote/image-20210714204410409.png"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件的读写原理</p>
+<ul>
+<li><p>文件的读写俗称“IO操作”</p>
+</li>
+<li><p>文件操作流程</p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210714205013731.png"></li>
+</ul>
+</li>
+<li><p>内置函数<code>open()</code>创建文件对象</p>
+<ul>
+<li><p><img src="/2022/03/10/pyNote/image-20210714205412883.png"></p>
+</li>
+<li><p>语法规则</p>
+<pre class=" language-python"><code class="language-python">file<span class="token operator">=</span>open<span class="token punctuation">(</span>filename<span class="token punctuation">[</span><span class="token punctuation">,</span>mode<span class="token punctuation">,</span>encoding<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p><code>mode</code>打开模式默认为只读，默认文本文件的编码格式为<code>gbk</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见的<strong>文件打开模式</strong></p>
+<ul>
+<li><p>按文件中数据的组织形式，文件分为以下两大类</p>
+<ul>
+<li><p>文本文件：存储的事普通“字符”文本，默认为<code>unicode</code>字符集，可以用记事本程序打开</p>
+</li>
+<li><p>二进制文件：把数据内容用“字节”进行存储，无法用记事本打开，必须使用专用的软件打开，举例：<code>mp3</code>音频文件，<code>jpg</code>图片,<code>doc</code>文档等</p>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210714210717541.png"></p>
+</li>
+<li><pre class=" language-python"><code class="language-python">src_file<span class="token operator">=</span>open<span class="token punctuation">(</span><span class="token string">'logo.png'</span><span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span>
+dest_file<span class="token operator">=</span>open<span class="token punctuation">(</span><span class="token string">'logo_2.png'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span>
+dest_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>src_file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+src_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+dest_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件对象的<strong>常用方法</strong></p>
+<ul>
+<li><p><img src="/2022/03/10/pyNote/image-20210714211439794.png"></p>
+</li>
+<li><pre class=" language-python"><code class="language-python">file<span class="token operator">=</span>open<span class="token punctuation">(</span><span class="token string">"123.txt"</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+
+file<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>tell<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+file<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>with</code>语句(上下文管理器)</p>
+<ul>
+<li><p><code>with</code>语句可以自动管理上下文资源，不论什么原因跳出<code>with</code>块，都能确保文件正确的关闭，以此来达到释放资源的目的</p>
+</li>
+<li><p><img src="/2022/03/10/pyNote/image-20210714213124509.png"></p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'123.txt'</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> file<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'logo.png'</span><span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> src_file<span class="token punctuation">:</span>
+    <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'logo_2.png'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> dest_file<span class="token punctuation">:</span>
+        dest_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>src_file<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>目录操作</p>
+<ul>
+<li><p><code>os</code>模块是<code>python</code>内置的与操作系统功能和文件系统相关的模块，该模块中的语句的执行结果通常与操作系统有关，在不同的操作系统上运行，得到的结果可能不一样</p>
+</li>
+<li><p><code>os</code>模块与<code>os.path</code>模块用于对于目录或文件进行操作</p>
+</li>
+<li><p><code>os</code>模块</p>
+<ul>
+<li><code>os.startfile(str)</code>打开<code>exe</code>文件</li>
+<li><code>os.system(cmd)</code>在<code>cmd</code>窗口输入命令</li>
+<li><img src="/2022/03/10/pyNote/image-20210715092830825.png"></li>
+</ul>
+</li>
+<li><p><code>os.path</code>模块</p>
+<ul>
+<li><img src="/2022/03/10/pyNote/image-20210715093427139.png"></li>
+<li>判断后缀时可以使用<code>filename.endwith(.py)</code>函数，返回值是<code>bool</code>型</li>
+</ul>
+</li>
+<li><p><code>os</code>模块中的<code>walk()</code>方法</p>
+<ul>
+<li><p><code>os.walk</code>方法用于通过在目录树中游走输出在目录中的文件名，向上或者向下</p>
+</li>
+<li><p>返回多个三元组<code>(root,dirs,files)</code></p>
+<ul>
+<li><p><code>root</code>指的是当前正在遍历的这个文件夹的本身的地址</p>
+</li>
+<li><p><code>dirs</code>是一个<code>list</code>，内容是该文件夹中所有的目录的名字(不包括子目录)</p>
+</li>
+<li><p><code>files</code>同样是一个<code>list</code>，内容是该文件夹中所有的文件(不包括子目录)</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> os
+path<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+lst_files<span class="token operator">=</span>os<span class="token punctuation">.</span>walk<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token keyword">for</span> dirpath<span class="token punctuation">,</span>dirname<span class="token punctuation">,</span>filename <span class="token keyword">in</span> lst_files<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> dir <span class="token keyword">in</span> dirname<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span>dir<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> file <span class="token keyword">in</span> filename<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>jion<span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span>file<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-补充"><a href="#13-补充" class="headerlink" title="13.补充"></a>13.补充</h3><ol>
+<li><code>eval</code>函数</li>
+</ol>
+<ul>
+<li><p><code>eval</code>函数用来执行一个字符串表达式，并返回表达式的值。还可以把字符串转化为<code>list</code>,<code>tuple</code>,<code>dict</code>。</p>
+</li>
+<li><p><code>eval</code>函数的语法：</p>
+<ul>
+<li><code>eval(expression[,globals[,locals]])</code></li>
+<li><code>expression</code>是表达式</li>
+<li><code>globals</code>是变量的作用域，如果被提供，必须是一个字典对象</li>
+<li><code>locals</code>是变量作用域，如果被提供，可以是任何映射对象</li>
+</ul>
+</li>
+<li><p>实例：</p>
+<ul>
+<li><pre class=" language-python"><code class="language-python">a<span class="token operator">=</span><span class="token string">'[1,2,3,4,5,6]'</span>
+b<span class="token operator">=</span>eval<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#a是字符串类型数据，b是列表类型数据</span>
+</code></pre>
+</li>
+<li><pre class=" language-python"><code class="language-python">a<span class="token operator">=</span><span class="token string">'{'</span>name<span class="token string">':zhangsan,'</span>age<span class="token string">':25}'</span>
+b<span class="token operator">=</span>eval<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#a是字符串类型数据，b是字典类型数据</span>
+</code></pre>
+</li>
+<li><pre class=" language-python"><code class="language-python">a<span class="token operator">=</span><span class="token string">'(1,2,3,4,5,6)'</span>
+b<span class="token operator">=</span>eval<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#a是字符串类型数据，b是元组类型数据</span>
+</code></pre>
+</li>
+<li><p>注意<code>eval</code>函数会忽略一些字符，比如说<code>\n</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><code>print</code>语句中添加<code>f</code></li>
+</ol>
+<ul>
+<li><pre class=" language-python"><code class="language-python">tensor<span class="token operator">=</span>torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token string">"Shape of tensor:{tensor.shape}"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 这条语句等效于</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Shape of tensor:{}"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>tensor<span class="token punctuation">.</span>shape<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+<ol start="3">
+<li><p><code>lambda</code>函数用法</p>
+<ul>
+<li><p><code>lambda</code>函数是一类无需定义标识符(函数名)的函数或子程序</p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x<span class="token operator">+</span>y
+<span class="token comment" spellcheck="true">#上述代码相当于</span>
+
+sum <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span>y <span class="token punctuation">:</span>x<span class="token operator">+</span>y
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>项目打包为<code>exe</code>可执行文件</p>
+<ul>
+<li><p>安装第三方模块</p>
+<ul>
+<li><p>在线安装</p>
+<p><code>pip intsall PyInstaller</code></p>
+</li>
+<li><p>执行打包操作</p>
+<p><code>pyinstaller -F D:\PyCharm\py\studentInfoSystem\main.py</code></p>
+<p><code>-F</code>是指只生成一个可执行文件</p>
+<p>执行完毕后，<code>exe</code>文件存放在倒数第二行的路径之中</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>设置输出<strong>字体颜色</strong></p>
+<ul>
+<li><p><img src="/2022/03/10/pyNote/image-20210719172505689.png"></p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\033[0;35m\t\t图书音像勋章\033[m'</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>夹在<code>\033[0;35m</code>和<code>\033[m</code>之间的变色</p>
+</li>
+</ul>
+</li>
+<li><p><code>enumerate</code>函数</p>
+<ul>
+<li><p>用来获得列表数据及其<strong>索引</strong></p>
+</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">for</span> index<span class="token punctuation">,</span>value <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+</li>
+<li><p>使用<code>enumerate</code>函数的原因是，用于修改列表中的值；如果不用<code>index</code>，那么修改的<code>value</code>仅是列表中值的拷贝</p>
+</li>
+</ul>
+</li>
+<li><p><code>excel</code>工具</p>
+<ul>
+<li>导入包<code>openpyxl</code></li>
+<li><code>wk = openpyxl.Workbook()</code>创建工作簿对象</li>
+<li><code>sheet = wk.sheet</code>获取活动表</li>
+<li><code>sheet.append(item)</code>遍历列表，将列表中的数据添加到工作表中，表中的一条数据，在<code>excel</code>中是一行</li>
+<li><code>wk.save()</code>保存</li>
+</ul>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">樱桃会长成樱花树吗</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zhusuwen.github.io/2022/03/10/pyNote/">http://zhusuwen.github.io/2022/03/10/pyNote/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">樱桃会长成樱花树吗</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/03/10/pyNote/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="pyNote">
+                        
+                        <span class="card-title">pyNote</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/note/" class="post-category">
+                                    note
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/09/%E8%AE%A1%E7%BD%91Note/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="计网Note">
+                        
+                        <span class="card-title">计网Note</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/note/" class="post-category">
+                                    note
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <a href="/about" target="_blank">樱桃会长成樱花树吗</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">28.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "3";
+                        var startDate = "7";
+                        var startHour = "15";
+                        var startMinute = "30";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/zhusuwen/zhusuwen.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:635370523@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=635370523" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 635370523" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/variation-26# https://www.zhihu.com/xxx" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/variation-26# https://www.zhihu.com/xxx" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+        <script type="text/javascript"> 
+            var OriginTitile = document.title, st; 
+            document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) }) </script>
+
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
