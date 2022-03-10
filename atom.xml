@@ -6,7 +6,7 @@
   <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhusuwen.github.io/"/>
-  <updated>2022-03-10T01:27:29.110Z</updated>
+  <updated>2022-03-10T01:34:30.686Z</updated>
   <id>http://zhusuwen.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>goNote</title>
+    <link href="http://zhusuwen.github.io/2022/03/10/goNote/"/>
+    <id>http://zhusuwen.github.io/2022/03/10/goNote/</id>
+    <published>2022-03-10T01:33:10.000Z</published>
+    <updated>2022-03-10T01:34:30.686Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Go安装&quot;&gt;&lt;a href=&quot;#Go安装&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://zhusuwen.github.io/categories/note/"/>
+    
+    
+    <category term="go" scheme="http://zhusuwen.github.io/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>py爬虫</title>
+    <link href="http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/"/>
+    <id>http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/</id>
+    <published>2022-03-10T01:29:55.000Z</published>
+    <updated>2022-03-10T01:31:21.909Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;爬虫&quot;&gt;&lt;a href=&quot;#爬虫&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://zhusuwen.github.io/categories/note/"/>
+    
+    
+    <category term="python" scheme="http://zhusuwen.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>pyNote</title>

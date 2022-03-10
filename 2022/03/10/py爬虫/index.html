@@ -4,24 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计网Note, 樱花树  |  信息安全">
-    <meta name="description" content="第一章 计算机网络和因特网什么是因特网
-计算机设备
-主机 = 端系统
-运行网络应用程序
+    <meta name="keywords" content="py爬虫, 樱花树  |  信息安全">
+    <meta name="description" content="爬虫
+从本质上说，就是利用程序在网上拿到对我们有用的数据
+实际上爬虫就是使用编程语言所编写的程序，作用是从网络上获取有价值的数据，重要的就是速度比手动获取数据快
 
 
-连接设备的通信链路
-光纤，铜缆，无线电，人造卫星
-传输速率 = 带宽
+爬取网页视频
+使用python程序替浏览器发请求，接收响应
 
-
-转发数据的分组交换机
-链路层交换机
-路由器
-
-
-因特网服务提供商（ISP）">
+安装第三方软">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计网Note | 樱桃会长成樱花树吗</title>
+    <title>py爬虫 | 樱桃会长成樱花树吗</title>
     <link rel="icon" type="image/jpeg" href="https://s1.ax1x.com/2022/03/09/bRiaVO.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -542,12 +534,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计网Note</h1>
+                    <h1 class="description center-align post-title">py爬虫</h1>
                 </div>
             </div>
         </div>
@@ -663,8 +655,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
-                                <span class="chip bg-color">计网</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -688,21 +680,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-09
+                    2022-03-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-09
+                    2022-03-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.5k
+                    2k
                 </div>
                 
 
@@ -724,1073 +716,332 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h1><h2 id="什么是因特网"><a href="#什么是因特网" class="headerlink" title="什么是因特网"></a>什么是因特网</h2><ul>
-<li>计算机设备<ul>
-<li>主机 = 端系统</li>
-<li>运行网络应用程序</li>
+                <h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><ul>
+<li>从本质上说，就是利用程序在网上拿到对我们有用的数据</li>
+<li>实际上爬虫就是使用编程语言所编写的程序，作用是从网络上获取有价值的数据，重要的就是速度比手动获取数据快</li>
+<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925091927888.png"></li>
 </ul>
-</li>
-<li>连接设备的通信链路<ul>
-<li>光纤，铜缆，无线电，人造卫星</li>
-<li>传输速率 = 带宽</li>
-</ul>
-</li>
-<li>转发数据的分组交换机<ul>
-<li>链路层交换机</li>
-<li>路由器</li>
-</ul>
-</li>
-<li>因特网服务提供商（<code>ISP</code>）</li>
-<li>协议<ul>
-<li>定义了在两个或两个以上通信实体之间交换的报文格式和次序，以及报文发送和接收一条报文或其他事件所采取的动作</li>
-</ul>
-</li>
-</ul>
-<h2 id="网络边缘：主机；接入网；物理介质网络"><a href="#网络边缘：主机；接入网；物理介质网络" class="headerlink" title="网络边缘：主机；接入网；物理介质网络"></a>网络边缘：主机；接入网；物理介质网络</h2><ul>
-<li>网络边缘<ul>
-<li>主机：客户端和服务器</li>
-<li>数据中心的服务器</li>
-</ul>
-</li>
-<li>网络边缘的构成<ul>
-<li>端系统（主机）<ul>
-<li>运行应用程序，如：运行浏览器、微信等的网络应用程序的设备</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>网络应用的通信模型<ul>
-<li>客户/服务器模型（<code>C/S</code>）</li>
-<li>对等模型（<code>P2P</code>）</li>
-</ul>
-</li>
-<li>接入网<ul>
-<li>将网络边缘与网络核心连接起来，通常是将端系统连接到边缘路由器上</li>
-<li>边缘路由器：端系统到任何其他远程端系统的路径上的第一台路由器</li>
-</ul>
-</li>
-<li>接入的方式<ul>
-<li>家庭：<code>Modem</code>拨号，<code>ADSL</code>拨号，<code>HFC</code>，<code>FTTH</code>，卫星</li>
-<li>企业：以太网，<code>WIFI</code></li>
-<li>广域无线接入：<code>3G</code>，<code>LTE</code>，<code>5G</code></li>
-<li>局域网接入<ul>
-<li>公司/大学的局域网（LAN）将端系统连接到边缘路由器</li>
-<li>以太网</li>
-</ul>
-</li>
-<li>无线接入<ul>
-<li>共享的无线接入网络连接端系统和路由器</li>
-<li>无线局域网</li>
-<li>广域无线接入</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>物理媒体分类<ul>
-<li>导引型媒体：信号沿着固体媒体被导引</li>
-<li>非导引型媒体：信号自由传播</li>
-<li>导引型媒体<ul>
-<li>双绞线</li>
-<li>同轴电缆</li>
-<li>光缆</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="网络核心：分组-x2F-电路交换；网络结构"><a href="#网络核心：分组-x2F-电路交换；网络结构" class="headerlink" title="网络核心：分组/电路交换；网络结构"></a>网络核心：分组/电路交换；网络结构</h2><ul>
-<li><p>电路交换网络</p>
+<h1 id="爬取网页视频"><a href="#爬取网页视频" class="headerlink" title="爬取网页视频"></a>爬取网页视频</h1><ul>
+<li><p>使用<code>python</code>程序替浏览器发请求，接收响应</p>
 <ul>
-<li>数据交换过程<ul>
-<li>第一步：建立连接；第二步：交换数据；第三步：释放链接</li>
-</ul>
+<li><p>安装第三方软件<code>requests</code>，使用<code>pip install requests</code></p>
 </li>
-<li>电路交换的特性<ul>
-<li>电路交换网络中（数字通信）</li>
-<li>数据交换前需建立起一条从发端到收端的电路（预留资源）</li>
-<li>在数据交换的全部时间内用户始终占用端到端的固定传输信道</li>
-<li>交换双方可实时进行数据交换而不会存在任何延迟</li>
-<li>电路交换的用户始终占用端到端的通信资源<ul>
-<li>独占链路，链路利用率太低</li>
-</ul>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+
+url<span class="token operator">=</span><span class="token string">'https://www.baidu.com/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
+resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>
+</code></pre>
 </li>
-</ul>
+<li><p>得到一个响应码，200表示成功，418表示遭到反爬</p>
 </li>
-<li>电路交换中的复用<ul>
-<li>时分复用<ul>
-<li>时间被划分为固定期间的帧，并且每个帧又被划分为固定数量的时隙</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228212931943.png" alt="image-20211228212931943"></li>
-</ul>
-</li>
-<li>频分复用<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228213021455.png" alt="image-20211228213021455"></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分组交换</p>
+<li><p>运行上述代码会得到</p>
 <ul>
-<li><p>数据被截断划分为分组</p>
+<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925093614674.png"></li>
+</ul>
 </li>
-<li><p>分组交换机（路由器）转发分组</p>
+<li><p>为防止被检测到，需要更改<code>UA</code></p>
 </li>
-<li><p>使用链路最大传输速率</p>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+
+url<span class="token operator">=</span><span class="token string">'https://www.baidu.com/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
+headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
+resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#请求响应码</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#请求头</span>
+</code></pre>
 </li>
-<li><p>为什么要分组</p>
+<li><p>得到</p>
 <ul>
-<li>提高传输效率</li>
-<li>提高传输质量</li>
-<li>链路利用率高</li>
+<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925094020847.png"></li>
+<li>可防止初级的反爬</li>
 </ul>
 </li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228213245233.png" alt="image-20211228213245233"></p>
+</ul>
 </li>
-<li><p>怎么分组</p>
+<li><p>正则表达式</p>
 <ul>
-<li>在发送端，先把较长的报文划分成较短的、固定长度的数据段</li>
-<li>每个数据段前面添加上首部构成分组</li>
-<li>分组交换网以“分组”作为数据传输单元</li>
-<li>依次把各分组发送到接收端</li>
-<li>接收端收到分组后剥去首部还原成报文</li>
+<li>正则表达式(Regular Expression)是一种文本模式，包括普通字符（例如，a 到 z 之间的字母）和特殊字符（称为”元字符”）。</li>
+<li>正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。</li>
+<li>——》菜鸟教程</li>
 </ul>
 </li>
-<li><p>分组传输的模式</p>
+<li><p>利用正则表达式提取<code>resp.text</code>中的内容</p>
 <ul>
-<li><p>存储转发传输</p>
-<p>分组交换机（链路层交换机或路由器）将整个分组收下并存储存储后再发出去</p>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> re<span class="token comment" spellcheck="true">#引入正则表达式</span>
+<span class="token keyword">import</span> time
+
+url<span class="token operator">=</span><span class="token string">'https://www.qiushibaike.com/video/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
+headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
+resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#第一个参数为规则，第二个参数为查找的内容;“.”代表任意字符，“*”代表任意个</span>
+info <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>r<span class="token string">'&lt;source src="(.*)" type=\'video/mp4\' />'</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#info是列表</span>
+lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> info<span class="token punctuation">:</span>
+    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'https:'</span><span class="token operator">+</span>item<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#print(lst)</span>
+
+<span class="token comment" spellcheck="true">#下载视频，一个一个发请求</span>
+count<span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword">for</span> index<span class="token punctuation">,</span>item <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    req<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>item<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第{0}个视频于{1}开始下载"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>index<span class="token punctuation">,</span>time<span class="token punctuation">.</span>asctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    count<span class="token operator">+=</span><span class="token number">1</span>
+    <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'video/'</span><span class="token operator">+</span>str<span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.mp4'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> dir<span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true">#写入本地磁盘</span>
+        dir<span class="token punctuation">.</span>write<span class="token punctuation">(</span>req<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第{0}个视频于{1}下载结束"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>index<span class="token punctuation">,</span>time<span class="token punctuation">.</span>asctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
 </li>
-<li><p>原因：校验</p>
-</li>
-</ul>
-</li>
-<li><p>分组交换的特征</p>
+<li><p><code>text</code>和<code>context</code></p>
 <ul>
-<li>数据分成若干组分别传送</li>
-<li>不必预先确定分组的传输路径</li>
-<li>交换节点均为共享节点，选择路径</li>
-<li>存储/转发</li>
-<li>断续（动态）分配传输带宽</li>
+<li>前者是文本，后者是二进制文件</li>
 </ul>
 </li>
-<li><p>存储转发的效率和可靠性</p>
+</ul>
+</li>
+</ul>
+<h1 id="京东数据可视化分析"><a href="#京东数据可视化分析" class="headerlink" title="京东数据可视化分析"></a>京东数据可视化分析</h1><ul>
+<li><p>分析有效的<code>url</code>，及数据的形式</p>
 <ul>
-<li>传输时延（发送时延）<ul>
-<li>将分组推向链路的时间，L/R，其中R为链路带宽</li>
-</ul>
-</li>
-<li>排队时延<ul>
-<li>存储需要缓存，缓存的过程中可能需要排队（等待前面的分组处理）</li>
-</ul>
-</li>
-<li>分组丢失<ul>
-<li>缓存满，随即丢弃等方式</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分组转发的路径（寻路）</p>
+<li><p>静态数据与动态数据</p>
 <ul>
-<li>分组首部包含目的地址</li>
-<li>路由表里面有转发表</li>
+<li>静态数据：服务器端已经渲染好的内容，直接发给浏览器，浏览器直接解释执行</li>
+<li>动态数据：点击下一页，数据栏未发生变化，说明数据时后来被渲染到HTML中的</li>
 </ul>
+</li>
+<li><p><code>f12</code>找到评论数据的请求，打开对应的<code>url</code>，复制信息到<code>json.cn</code>进行解析（注意去掉多的内容）</p>
 </li>
 </ul>
 </li>
-<li><p>分组交换 VS 电路交换</p>
+<li><p>编写<code>python</code>向服务器发送请求获取数据</p>
 <ul>
-<li>分组交换网络存在的问题<ul>
-<li>分组在各节点村存储转发时因为需要排队总会造成一定的时延，当网络通信量过大时，这种时延可能会很大</li>
-<li>各分组必须携带一定的控制信息（说明信息），从而带来额外的开销</li>
-<li>整个分组交换网的管理和控制比较复杂</li>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> openpyxl <span class="token comment" spellcheck="true">#用于操作excel</span>
+
+<span class="token comment" spellcheck="true">#获取评论</span>
+<span class="token keyword">def</span> <span class="token function">getComment</span><span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#发送请求</span>
+   url<span class="token operator">=</span><span class="token string">'https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId={0}&amp;score=0&amp;sortType=5&amp;page={1}&amp;pageSize=10&amp;isShadowSku=0&amp;fold=1'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span>
+    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
+    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#    if url==None:</span>
+<span class="token comment" spellcheck="true">#        print('爬取失败')</span>
+<span class="token comment" spellcheck="true">#    else:</span>
+<span class="token comment" spellcheck="true">#        print('爬取成功')</span>
+
+    <span class="token comment" spellcheck="true">#显示输出,去掉多余的</span>
+    s<span class="token operator">=</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'fetchJSON_comment98('</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span>
+    s<span class="token operator">=</span>s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">');'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">#json解析</span>
+    json_data<span class="token operator">=</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> json_data
+
+<span class="token comment" spellcheck="true">#获取最大页数</span>
+<span class="token keyword">def</span> <span class="token function">getMaxPage</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    dic_data<span class="token operator">=</span>getComment<span class="token punctuation">(</span>productId<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#向服务器发送请求，获取字典信息</span>
+    <span class="token keyword">return</span> dic_data<span class="token punctuation">[</span><span class="token string">'maxPage'</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">#提取数据</span>
+<span class="token keyword">def</span> <span class="token function">getInfo</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#max_page=getMaxPage() 不能爬取太多，否则会被封ip</span>
+    max_page<span class="token operator">=</span><span class="token number">1</span>
+    lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#存储提取到的数据</span>
+    <span class="token keyword">for</span> page <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>max_page<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        comments<span class="token operator">=</span>getComment<span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span>
+        commentList<span class="token operator">=</span>comments<span class="token punctuation">[</span><span class="token string">'comments'</span><span class="token punctuation">]</span>
+        <span class="token comment" spellcheck="true">#遍历列表，获取每条评论的内容，颜色，鞋码</span>
+        <span class="token keyword">for</span> item <span class="token keyword">in</span> commentList<span class="token punctuation">:</span>
+            content<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span>
+            color<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'productColor'</span><span class="token punctuation">]</span>
+            size<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'productSize'</span><span class="token punctuation">]</span>
+            lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>content<span class="token punctuation">,</span>color<span class="token punctuation">,</span>size<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#将每条评论信息添加到列表中</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#延迟时间，防止太快，被封ip</span>
+    save<span class="token punctuation">(</span>lst<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#存储到excel中</span>
+<span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    wk<span class="token operator">=</span>openpyxl<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#创建工作簿对象（即使一个.xlsx文件）</span>
+    sheet<span class="token operator">=</span>wk<span class="token punctuation">.</span>active <span class="token comment" spellcheck="true">#获取活动表</span>
+
+    <span class="token comment" spellcheck="true">#遍历列表，把数据添加到工作表中，列表中的数据在excel中是一行</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+        sheet<span class="token punctuation">.</span>append<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+
+    wk<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'销售数据.xlsx'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">#测试</span>
+<span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    productId<span class="token operator">=</span><span class="token string">'30890079142'</span>
+    getInfo<span class="token punctuation">(</span>productId<span class="token punctuation">)</span>
+</code></pre>
+</li>
 </ul>
 </li>
-<li>若要连续传送大量数据，且其传送时间远大于呼叫建立时间，则采用在数据通信之前预先分配传输带宽的电路交换较为合适</li>
-<li>分组交换不需要预先分配带宽，在传送突发数据时可提高整个网络的信道利用率</li>
-</ul>
-</li>
-</ul>
-<h2 id="分组交换网的时延、丢包和吞吐量"><a href="#分组交换网的时延、丢包和吞吐量" class="headerlink" title="分组交换网的时延、丢包和吞吐量"></a>分组交换网的时延、丢包和吞吐量</h2><ul>
-<li>分组交换比电路交换不足之处<ul>
-<li>网络延迟<ul>
-<li>时延、丢包等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数据丢失和产生时延的原因<ul>
-<li>在路由器缓存中的分组队列<ul>
-<li>分组到达输入链路的速率超出输出链路的能力</li>
-<li>分组队列，等待转发</li>
-</ul>
-</li>
-<li>节点处理实验<code>dproc</code><ul>
-<li>检测比特差错</li>
-<li>确定输出链路</li>
-</ul>
-</li>
-<li>排队时延<code>dqueue</code><ul>
-<li>在输出链路中等待被发送</li>
-<li>取决于路由器的拥塞程度</li>
-</ul>
-</li>
-<li>传输时延<code>dtrans</code><ul>
-<li>R=链路带宽，L=分组长度</li>
-<li>将分组比特流发送到链路上的时间=L/R</li>
-</ul>
-</li>
-<li>传播时延<code>dprop</code><ul>
-<li>d=物理链路的长度，s=媒体中的传播速度</li>
-<li>传播时延=d/s</li>
-</ul>
-</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228215605760.png" alt="image-20211228215605760"></li>
-</ul>
-</li>
-<li>吞吐量<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228215721466.png" alt="image-20211228215721466"></li>
-</ul>
-</li>
-</ul>
-<h2 id="协议层次"><a href="#协议层次" class="headerlink" title="协议层次"></a>协议层次</h2><ul>
-<li><p>因特网的协议栈</p>
+<li><p>进行数据分析</p>
 <ul>
-<li>应用层，支持网络应用<ul>
-<li><code>FTP</code>，<code>SMTP</code>，<code>HTTP</code></li>
+<li><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#数据分析</span>
+<span class="token comment" spellcheck="true">#分析不同码数鞋子的销量</span>
+
+<span class="token keyword">import</span> openpyxl
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> pit
+
+wk<span class="token operator">=</span>openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'销售数据.xlsx'</span><span class="token punctuation">)</span>
+sheet<span class="token operator">=</span>wk<span class="token punctuation">.</span>active  <span class="token comment" spellcheck="true">#获取活动sheet表</span>
+
+<span class="token comment" spellcheck="true">#获取最大行数和最大列数</span>
+row<span class="token operator">=</span>sheet<span class="token punctuation">.</span>max_row
+col<span class="token operator">=</span>sheet<span class="token punctuation">.</span>max_column
+<span class="token comment" spellcheck="true">#print(row,col)</span>
+
+lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#用于存出鞋码</span>
+<span class="token comment" spellcheck="true">#读取鞋码</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>row<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    size<span class="token operator">=</span>sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token comment" spellcheck="true">#cell表示sheet的单元格</span>
+    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>size<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#开始统计数据，统计不同码数鞋子的销量</span>
+<span class="token comment" spellcheck="true">#使用字典，鞋码作键，销量作值</span>
+dicSize<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+    dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
+
+<span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+    dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">=</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span>
+
+<span class="token comment" spellcheck="true">#输出数据</span>
+<span class="token comment" spellcheck="true">#for item in dicSize:</span>
+<span class="token comment" spellcheck="true">#    print(item,dicSize[item])</span>
+lst_total<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> dicSize<span class="token punctuation">:</span>
+    lst_total<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>item<span class="token punctuation">,</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">,</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">100</span><span class="token operator">*</span><span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#进行可视化数据统计</span>
+labels<span class="token operator">=</span><span class="token punctuation">[</span>item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#使用列表生成式</span>
+fraces<span class="token operator">=</span><span class="token punctuation">[</span>item<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">]</span>
+pit<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.family'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#适应中文</span>
+pit<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>x<span class="token operator">=</span>fraces<span class="token punctuation">,</span>labels<span class="token operator">=</span>labels<span class="token punctuation">,</span>autopct<span class="token operator">=</span><span class="token string">'%1.1f%%'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#pit.show()</span>
+pit<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'图.png'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#savefig要放在show前面执行，不然会显示空白</span>
+</code></pre>
+</li>
 </ul>
 </li>
-<li>运输层，主机间的数据传输<ul>
-<li><code>TCP</code>，<code>UDP</code></li>
 </ul>
-</li>
-<li>网络层，将数据报从源<strong>端</strong>传送到目的<strong>端</strong><ul>
-<li><code>IP</code>，路由协议</li>
-</ul>
-</li>
-<li>链路层，数据在网络相邻节点之间传输<ul>
-<li><code>PPP</code>，以太网</li>
-</ul>
-</li>
-<li>物理层，在线路上传输比特流</li>
-</ul>
-</li>
-<li><p>封装</p>
+<h1 id="爬取12306车次信息"><a href="#爬取12306车次信息" class="headerlink" title="爬取12306车次信息"></a>爬取12306车次信息</h1><ul>
+<li><p><code>chrome</code>分析网站</p>
 <ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228220205436.png" alt="image-20211228220205436"></li>
+<li><code>elements</code>：元素<code>HTML</code>，<code>css</code>，<code>js</code></li>
+<li><code>console</code></li>
+<li><code>Source</code>：相当于文件夹，<code>elements</code>，<code>js</code>，<code>css</code>等</li>
+<li><code>network</code>：所有发送的请求</li>
 </ul>
 </li>
-</ul>
-<hr>
-<h1 id="第二章-应用层（报文）"><a href="#第二章-应用层（报文）" class="headerlink" title="第二章 应用层（报文）"></a>第二章 应用层（报文）</h1><h2 id="应用层协议原理"><a href="#应用层协议原理" class="headerlink" title="应用层协议原理"></a>应用层协议原理</h2><ul>
-<li>网络应用的架构<ul>
-<li>客户端/服务器</li>
-<li>对等网（<code>P2P</code>）</li>
-</ul>
-</li>
-<li>套接字<ul>
-<li>每个网络应用进程都有一个属于自己的套接字，该套接字在整个因特网上独一无二<ul>
-<li>主机地址：标识该网络进程运行在因特网上哪一台主机上，通产使用32位<code>IP</code>地址标识</li>
-<li>端口地址：在该主机上标识该网络应用进程通常使用16位端口号标识</li>
-</ul>
-</li>
-<li>长度为16+32=48位</li>
-</ul>
-</li>
-</ul>
-<h2 id="Web和HTTP"><a href="#Web和HTTP" class="headerlink" title="Web和HTTP"></a>Web和HTTP</h2><ul>
-<li><code>URL</code><ul>
-<li>任何一个对象都可以用URL来定位</li>
-<li>例子：<code>www.hust.edu.cn/cs/pic.gif</code></li>
-</ul>
-</li>
-<li>持续连接与非持续连接<ul>
-<li>非持续连接<ul>
-<li>每个请求/响应对是经过一个单独的TCP连接发送</li>
-</ul>
-</li>
-<li>持续连接<ul>
-<li>非流水线方式<ul>
-<li>一个对象传输完成方能传输下一个</li>
-</ul>
-</li>
-<li>流水线方式<ul>
-<li>可以一次性发送所有请求，慢慢接收</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>cookie</code><ul>
-<li><code>web</code>使用<code>cookie</code>的目的<ul>
-<li>限制用户的身份</li>
-<li>把内容与用户身份关联起来</li>
-</ul>
-</li>
-<li><code>cookie</code>技术的组成部分<ul>
-<li>在HTTP响应报文中有一个<code>cookie</code>首部行</li>
-<li>在HTTP请求报文中有一个<code>cookie</code>首部行</li>
-<li>在用户的端系统中保留了一个<code>cookie</code>文件，由用户浏览器负责管理</li>
-<li>在<code>web</code>站点有一个后端数据库</li>
-</ul>
-</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228221647835.png" alt="image-20211228221647835"></li>
-</ul>
-</li>
-</ul>
-<h2 id="DNS：因特网的目录服务"><a href="#DNS：因特网的目录服务" class="headerlink" title="DNS：因特网的目录服务"></a><code>DNS</code>：因特网的目录服务</h2><ul>
-<li><p><code>DNS</code>系统，用于<code>IP</code>地址和域名之间的转换</p>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228221847533.png" alt="image-20211228221847533"></p>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228221826781.png" alt="image-20211228221826781"></p>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228221922645.png" alt="image-20211228221922645"></p>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228221931346.png" alt="image-20211228221931346"></p>
-</li>
-</ul>
-<hr>
-<h1 id="第三章-运输层（报文段）"><a href="#第三章-运输层（报文段）" class="headerlink" title="第三章 运输层（报文段）"></a>第三章 运输层（报文段）</h1><h2 id="概述与运输层服务"><a href="#概述与运输层服务" class="headerlink" title="概述与运输层服务"></a>概述与运输层服务</h2><ul>
-<li>运输层的功能<ul>
-<li>为不同主机上运行的应用程序之间提供逻辑通信</li>
-</ul>
-</li>
-<li>运输层和网络层的区别<ul>
-<li>网络层：不同主机间的逻辑通信</li>
-<li>运输层：应用进程之间的逻辑通信</li>
-</ul>
-</li>
-</ul>
-<h2 id="多路复用和多路分解"><a href="#多路复用和多路分解" class="headerlink" title="多路复用和多路分解"></a>多路复用和多路分解</h2><ul>
-<li>端口<ul>
-<li>端口的作用就是让应用层的各种应用进程都能将其数据通过端口向下交付给运输层，以及让运输层知道应当将其报文段中的数据向上通过端口交付给应用层相应的进程。</li>
-</ul>
-</li>
-<li>套接字、端口和<code>IP</code><ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228222740251-16407016614241.png" alt="image-20211228222740251"></li>
-</ul>
-</li>
-<li><code>UDP</code>套接字由一个二元组标识<ul>
-<li>包括一个目的<code>IP</code>地址和一个目的端口号</li>
-<li>如果两个<code>UDP</code>报文段上述二元组相同，则通过同一个目的套接字被定向到相同的目的进程</li>
-</ul>
-</li>
-<li><code>TCP</code>套接字由一个四元组标识<ul>
-<li>(源<code>IP</code>地址，源端口号，目的<code>IP</code>地址，目的端口号)</li>
-<li>接收方主机根据这四个值将报文段定向到相应的套接字</li>
-<li><code>web</code>服务器为其每一个客户连接创建不同的套接字</li>
-</ul>
-</li>
-</ul>
-<h2 id="无连接传输：UDP"><a href="#无连接传输：UDP" class="headerlink" title="无连接传输：UDP"></a>无连接传输：<code>UDP</code></h2><ul>
-<li>一个最简单的运输层协议必须提供<ul>
-<li>多路复用/多路分解</li>
-<li>差错检查</li>
-</ul>
-</li>
-<li><code>UDP</code>处理数据的流程<ul>
-<li>发送方<ul>
-<li>从应用程序得到数据</li>
-<li>附加上为多路复用/多路分解所需的源和目的端口号及差错检测信息，形成报文段</li>
-<li>递交给网络层，尽力而为的交付给接收主机</li>
-</ul>
-</li>
-<li>接收方<ul>
-<li>从网络层接收报文段</li>
-<li>根据目的端口号，将数据交付给相应的应用进程</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>UDP</code>的优势<ul>
-<li>无需建立连接</li>
-<li>简单</li>
-<li>段首部开销小（<code>8Byte</code>）</li>
-<li>无拥塞控制</li>
-</ul>
-</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228223920354.png" alt="image-20211228223920354"></li>
-<li><code>UDP</code>的检验和<ul>
-<li>发送方<ul>
-<li>把报文段看作是<code>16bit字</code>的序列</li>
-<li>检验和：对报文段的所有<code>16bit字</code>的和进行反码运算（溢出回卷）</li>
-<li>发送方将校验和写入<code>UDP</code>检验和字段中</li>
-</ul>
-</li>
-<li>接收方<ul>
-<li>计算接收到报文段的和</li>
-<li>与发送方的检验和相加<ul>
-<li>不全为1——检测出错</li>
-<li>全为1——未检测到出错</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="可靠数据传输的原理"><a href="#可靠数据传输的原理" class="headerlink" title="可靠数据传输的原理"></a>可靠数据传输的原理</h2><ul>
-<li><p><code>rdt2.0</code></p>
+<li><p>如何爬取数据</p>
 <ul>
-<li>假设<ul>
-<li>分组比特可能受损</li>
-<li>所有传输的分组都将按序被接收，不会丢失</li>
+<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210927091331789.png"></li>
+<li></li>
 </ul>
 </li>
-<li>处理机制<ul>
-<li>如如判断分组受损——差错检测（<code>ACK</code>和<code>NAK</code>）</li>
-</ul>
+<li><p>功能封装函数提取</p>
 </li>
-</ul>
-</li>
-<li><p><code>rdt2.1</code></p>
+<li><p>爬取12306车次数据</p>
 <ul>
-<li><p>问题引入</p>
+<li>爬取车次数据后发现车站名称有英文简称，在<code>js</code>栏中可以找到<code>station_name</code>进行分析</li>
+</ul>
+</li>
+<li><p><code>json</code>数据解析</p>
+</li>
+<li><p>正则表达式提取数据</p>
 <ul>
-<li><code>ACK</code>和<code>NAK</code>的分组可能受损</li>
+<li><code>[\u4e00-\u9fa5]</code>代表全部的汉字</li>
 </ul>
 </li>
-<li><p>处理机制</p>
+<li><p>数据展示</p>
+</li>
+<li><p>完整代码</p>
 <ul>
-<li><p>发送发重发——若收到被破坏的<code>ACK</code>或<code>NAK</code></p>
+<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> re
+
+<span class="token comment" spellcheck="true">#代替浏览器发送请求</span>
+<span class="token keyword">def</span> <span class="token function">sendRequset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url<span class="token operator">=</span><span class="token string">'https://kyfw.12306.cn/otn/leftTicket/queryY?leftTicketDTO.train_date=2021-09-27&amp;leftTicketDTO.from_station=BJP&amp;leftTicketDTO.to_station=TJP&amp;purpose_codes=ADULT'</span>
+    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 Edg/94.0.992.31'</span><span class="token punctuation">,</span><span class="token string">'Cookie'</span><span class="token punctuation">:</span><span class="token string">'_uab_collina=163270470989732643680974; JSESSIONID=3B9AFBC05E0BD1CD80AF6BC2C261E466; BIGipServerotn=3990290698.50210.0000; BIGipServerpassport=803733770.50215.0000; guidesStatus=off; highContrastMode=defaltMode; cursorStatus=off; RAIL_EXPIRATION=1633025496474; RAIL_DEVICEID=r-BfdT9ZoSUFu8mDnx4vo8tqNI_FJsOg_yhnqUn4X8my8cVtiZS9YdNYxKHeftzfftX-chAnhrrTxEkcbpG5DpiXJ0U4s-Rcyz5-LYa9cQZUGZLQ4H97ygypQeuIMbEXk9CYRijmQRQBzFi90NDhwsXfWvTbT43k; route=9036359bb8a8a461c164a04f8f50b252; _jc_save_fromStation=%u5317%u4EAC%2CBJP; _jc_save_toStation=%u5929%u6D25%2CTJP; _jc_save_fromDate=2021-09-27; _jc_save_toDate=2021-09-27; _jc_save_wfdc_flag=dc; BIGipServerportal=3168010506.17695.0000'</span><span class="token punctuation">}</span>
+    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#加headers的UA后仍然被反爬，再加cookie后得到正确数据，如果还不行则继续加headers</span>
+
+    <span class="token comment" spellcheck="true">#设置编码格式,在网站element栏搜索charset找出编码格式</span>
+    resp<span class="token punctuation">.</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span>
+        <span class="token comment" spellcheck="true">#print(resp.text)</span>
+    <span class="token keyword">return</span> resp
+
+
+<span class="token comment" spellcheck="true">#提取车次信息具体数据</span>
+<span class="token keyword">def</span> <span class="token function">parseJson</span><span class="token punctuation">(</span>resp<span class="token punctuation">,</span>stationName<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#将响应结果转为json</span>
+    jsonTicket<span class="token operator">=</span>resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    lstTicket<span class="token operator">=</span>jsonTicket<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#提取车次列表</span>
+
+    <span class="token comment" spellcheck="true">#遍历每个车次信息，以“|”为分隔符分割</span>
+    <span class="token comment" spellcheck="true">#[3]表示车次，[6]查询起始站，[7]查询到达站，[31]一等座，[30]表示二等座，[13]表示出行时间</span>
+    lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#存储上述信息</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> lstTicket<span class="token punctuation">:</span>
+        d<span class="token operator">=</span>item<span class="token punctuation">.</span>split<span class="token punctuation">(</span>sep<span class="token operator">=</span><span class="token string">'|'</span><span class="token punctuation">)</span>
+        lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>stationName<span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>stationName<span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> lst
+
+
+<span class="token comment" spellcheck="true">#获取车站名称信息，即’车站名‘和’车站名简称‘的对应表</span>
+<span class="token keyword">def</span> <span class="token function">getStation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    url <span class="token operator">=</span> <span class="token string">'https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9204'</span>
+    headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 Edg/94.0.992.31'</span><span class="token punctuation">}</span>
+    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+    resp<span class="token punctuation">.</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span>
+        <span class="token comment" spellcheck="true">#print(resp.text)</span>
+    <span class="token comment" spellcheck="true">#获取指定格式的字串</span>
+    stationList<span class="token operator">=</span>re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>r<span class="token string">'([\u4e00-\u9fa5]+)\|([A-Z]+)'</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#正则表达式，[\u4e00-\u9fa5]代表全部的汉字</span>
+        <span class="token comment" spellcheck="true">#print(stationList)</span>
+    <span class="token comment" spellcheck="true">#返回的stationList是列表，需要转成字典</span>
+    nameDic<span class="token operator">=</span>dict<span class="token punctuation">(</span>stationList<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#print(nameDic)</span>
+    <span class="token comment" spellcheck="true">#进行键值呼唤</span>
+    anti_nameDic<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">#空字典，用于将key和value进行交换</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> nameDic<span class="token punctuation">:</span>
+        anti_nameDic<span class="token punctuation">[</span>nameDic<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">=</span>item
+    <span class="token keyword">return</span> anti_nameDic
+
+
+<span class="token keyword">def</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#得到车次信息</span>
+    lst<span class="token operator">=</span>parseJson<span class="token punctuation">(</span>sendRequset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>getStation<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">#筛选，去除无票车次</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> item<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'无'</span> <span class="token operator">and</span> item<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">''</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#getStation()</span>
+    start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 </li>
-<li><p>为每一个数据报加上<strong>序号</strong></p>
-</li>
-<li><p>接收方收到重复序号则丢弃</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>rdt2.2</code></p>
-<ul>
-<li>改进<ul>
-<li>只使用<code>ACK</code></li>
-<li>取消<code>NAK</code>接收方对最后一个正确接收到的分组发送<code>ACK</code></li>
-<li>发送方接收到重复的<code>ACK</code>将按照<code>NAK</code>处理</li>
-</ul>
-</li>
-<li>停等协议<ul>
-<li>发送方发送数据报之后等待接收方的响应</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>rdt3.0</code></p>
-<ul>
-<li>假设<ul>
-<li>底层信道不但可能出错，而且可能会丢包</li>
-</ul>
-</li>
-<li>处理机制<ul>
-<li>丢包后重传</li>
-<li>设置定时器</li>
-</ul>
-</li>
-<li>性能低下<ul>
-<li>停等操作</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>提高性能的方法——流水线技术</p>
-<ul>
-<li>允许发送方发送多个分组而无需等待确认<ul>
-<li>增大序号范围（原来的0,1不够用）</li>
-<li>发送方最低限度应当能缓存那些已发送但未被确认的分组</li>
-<li>或许需要缓存那些已经正确接收的分组</li>
-</ul>
-</li>
-<li>工作原理<ul>
-<li>分组首部用k位<code>bit</code>字段表示序号</li>
-<li>未被传输和已被传输但还未确认的分组的许可序号范围可以看作是一个在序号范围内大小为N的“窗口”</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>问题：当流水线技术中丢失一个分组后，如何进行重传</p>
-<ul>
-<li><code>Go-Back-N</code>协议：其后分组全部重传<ul>
-<li>特点<ul>
-<li><strong>累积确认</strong>——<code>ACK(n)</code>接收方对序号n之前包括n在内的所有分组进行确认</li>
-<li><strong>一个定时器</strong>——从一次流水的最老分组开始计时</li>
-<li><strong>超时</strong>——重传分组n和窗口中所有序号大于n的分组</li>
-<li><strong>接收方无缓存</strong></li>
-</ul>
-</li>
-<li>思考<ul>
-<li>收到重复的分组怎么处理？</li>
-<li>丢弃分组，重发<code>ACK</code></li>
-<li>分组失序怎么办？</li>
-<li>丢弃不缓存，重发按序到达的最高序号分组的<code>ACK</code></li>
-</ul>
-</li>
-<li>发送端窗口<code>&lt;=</code> 2^k - 1</li>
-</ul>
-</li>
-<li><code>SR</code>选择重传协议<ul>
-<li>发送方<ul>
-<li><strong>超时</strong>——为每个分组定义定时器，重传分组n，重置定时器</li>
-<li>收到确认(n)在[<code>sendbase</code>,<code>sendbase+N</code>-1]范围内<ul>
-<li>标记分组n为已接收</li>
-<li>如果n是发送窗口基序号<code>sendbase</code>，则将窗口基序号前推倒下一个未确认序号</li>
-<li>若窗口移动，新进入窗口的未发送分组会被发送</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>接收方<ul>
-<li>分组序号n在[<code>rcvbase</code>,<code>rcvbase+N</code>-1]范围内<ul>
-<li>发送n的确认<code>ACK</code></li>
-<li>如果分组序号不连续：将其缓存</li>
-<li>按序分组：将该分组以及缓存的序号连续的分组一起交付给上层，将窗口前推到下一个未收到的分组</li>
-</ul>
-</li>
-<li>分组序号n在[<code>rcvbase</code>-N,<code>rcvbase</code>-1]范围内<ul>
-<li>虽然确认过，仍再次发送<code>ACK</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>接收方窗口<code>&lt;=</code> 2^(k-1)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="面向连接的传输：TCP"><a href="#面向连接的传输：TCP" class="headerlink" title="面向连接的传输：TCP"></a>面向连接的传输：<code>TCP</code></h2><ul>
-<li><p><code>RTT</code>的估算</p>
-<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228232243824.png" alt="image-20211228232243824"></li>
-<li>参考值<code>0.125</code></li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228232341455.png" alt="image-20211228232341455"></li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228232414379.png" alt="image-20211228232414379"></li>
-</ul>
-</li>
-<li><p><code>TCP</code>的特别之处</p>
-<ul>
-<li><code>TCP</code>采用按字节编号，而非按报文段序号</li>
-<li><code>TCP</code>仅采用唯一的定时器</li>
-<li><strong>超时</strong>——重传认为超时的报文段，重启定时器</li>
-<li>**收到<code>ACK</code>**——如果是对之前未确认的报文段确认，跟新<code>sendbase</code>，如果还有未被确认的报文段，<code>TCP</code>重启定时器</li>
-<li><strong>累计确认</strong></li>
-<li><strong>超时间隔加倍</strong><ul>
-<li>每一次<code>TCP</code>重传均将下一次超时间隔设为先前值的两倍</li>
-<li>超时间隔由<code>EstimatedRTT</code>和<code>DevRTT</code>决定</li>
-<li>发生以下两个事件，超时间隔重新计算<ul>
-<li>收到上层应用的数据</li>
-<li>收到对未确认的数据的<code>ACK</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>快速重传</strong><ul>
-<li>超时周期往往太长——增加重发丢失分组的延时</li>
-<li>通过重复的<code>ACK</code>来检测丢失报文段<ul>
-<li>发送方常要连续的发送大量报文段</li>
-<li>如果一个报文段丢失，会引起很多连读的重复<code>ACK</code></li>
-</ul>
-</li>
-<li>如果发送方收到一个数据的**3个<code>ACK</code>**，他会认为确认数据之后的报文段丢失</li>
-<li>在超时到来之前重传报文段<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228233915888.png" alt="image-20211228233915888"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>产生<code>TCP ACK</code>的建议<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228233400620.png" alt="image-20211228233400620"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228232921174.png" alt="image-20211228232921174"></p>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228232953609.png" alt="image-20211228232953609"></p>
-</li>
-<li><p>流量控制</p>
-<ul>
-<li><p>目标</p>
-<ul>
-<li>发送方不会由于传的太多太快而是的接收方缓存溢出</li>
-</ul>
-</li>
-<li><p>手段</p>
-<ul>
-<li>接收方在反馈时，将缓冲区的剩余空间大小填充在报文段首部的窗口字段中，通知发送方</li>
-</ul>
-</li>
-<li><p>窗口值的计算</p>
-<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228234101652.png" alt="image-20211228234101652"></li>
-</ul>
-</li>
-<li><p>发送方持续向接收方发送只有一个字节数据的报文段，目的是试探</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="拥塞控制原理"><a href="#拥塞控制原理" class="headerlink" title="拥塞控制原理"></a>拥塞控制原理</h2><h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><ul>
-<li>拥塞窗口(<code>cwnd</code>)</li>
-<li>发送方如何感知拥塞<ul>
-<li>超时</li>
-<li>三个冗余<code>ACK</code></li>
-</ul>
-</li>
-<li>拥塞处理<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228234651088.png" alt="image-20211228234651088"></li>
-<li>看题目</li>
-</ul>
-</li>
-<li><code>TCP</code>的吞吐量<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228235133034.png" alt="image-20211228235133034"></li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211228235145021.png" alt="image-20211228235145021"></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="第四章-网络层—数据平面（数据报）"><a href="#第四章-网络层—数据平面（数据报）" class="headerlink" title="第四章 网络层—数据平面（数据报）"></a>第四章 网络层—数据平面（数据报）</h1><h2 id="网络层概述"><a href="#网络层概述" class="headerlink" title="网络层概述"></a>网络层概述</h2><ul>
-<li>网络层的目标<ul>
-<li>实现主机到主机之间的通信</li>
-</ul>
-</li>
-<li>网络层在计算机网络中的地位<ul>
-<li>为运输层提供支持<ul>
-<li>运输层实现进程到进程的通信</li>
-<li>运输层功能的实现依赖于网络层提供的服务</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>网络层的主要功能<ul>
-<li>在全局范畴为主机之间的通信进行选路，选路的结果反应为分组交换机的转发表</li>
-<li>分组交换设备上的网络层根据 以及分组头部信息，将分组向适当链路进行转发</li>
-</ul>
-</li>
-<li>分组交换机设备分类<ul>
-<li>根据<strong>链路层首部信息</strong>进行转发的——链路层节点交换机</li>
-<li>根据<strong>网络层首部信息</strong>进行转发的——路由器</li>
-</ul>
-</li>
-</ul>
-<h2 id="路由器工作原理"><a href="#路由器工作原理" class="headerlink" title="路由器工作原理"></a>路由器工作原理</h2><ul>
-<li>最长前缀匹配<ul>
-<li>查找给定目标地址的转发表项时，请使用与目标地址匹配的最长地址前缀</li>
-</ul>
-</li>
-<li>输入端口排队<ul>
-<li>输入端口的处理速率超过了交换结构的速率</li>
-<li>线头阻塞：在输入队列中排队的分组必须等待通过交换结构发送，因为它被位于线头的另一个分组阻塞了</li>
-<li>输入缓冲区溢出可能导致排队时延和丢包</li>
-</ul>
-</li>
-<li>交换结构<ul>
-<li>经内存交换</li>
-<li>经总线交换</li>
-<li>经内联网络交换</li>
-</ul>
-</li>
-<li>输出端口<ul>
-<li>交换结构将分组交付给输出端口的速率超过输出链路的速率</li>
-</ul>
-</li>
-</ul>
-<h2 id="网际协议：IPv4、寻址"><a href="#网际协议：IPv4、寻址" class="headerlink" title="网际协议：IPv4、寻址"></a>网际协议：<code>IPv4</code>、寻址</h2><ul>
-<li><p><code>IP</code>分片和分组</p>
-<ul>
-<li>网络链路具有<code>MTU(最大传输单位)</code>属性——由链路层最大帧决定</li>
-<li>不同类型的链路有不同的<code>MTU</code>值</li>
-<li>大的<code>IP</code>数据报在网络中会被分为小的分片<ul>
-<li>一个数据报变成了几个数据报</li>
-<li>重组只在目的主机进行</li>
-<li>数据报头部的<strong>标识、标志、片偏移、长度字段</strong>用于目的主机对接收的分片进行重组</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229095807949.png" alt="image-20211229095807949"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>IP</code>地址</p>
-<ul>
-<li><p>高位：网络号；低位：主机号</p>
-</li>
-<li><p><code>IP</code>地址的分类</p>
-<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229095919777.png" alt="image-20211229095919777"></li>
-</ul>
-</li>
-<li><p>划分子网：从主机号中借一部分作为子网号</p>
-<ul>
-<li><p>子网掩码</p>
-<ul>
-<li>作用：对外隐藏子网的存在，对内指示网络号和子网号的位置</li>
-<li>获得方法：通过在网络号的子网号相应的位置全置1，主机号相应的位置全置0，即可得到子网掩码</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229100206074.png" alt="image-20211229100206074"></li>
-</ul>
-</li>
-<li><p>网络地址</p>
-<ul>
-<li><strong><code>IP</code>地址</strong> AND <strong>子网掩码</strong> = <strong>网络地址</strong></li>
-</ul>
-</li>
-<li><p>引入子网掩码后的寻址</p>
-<ul>
-<li><p>检查分组目的地址的<code>IP</code>地址的网络号</p>
-<p>若网络号不是本网络，则从路由表中找出相应的转发节点地址将其转发出去</p>
-</li>
-<li><p>检查子网号</p>
-<p>当网络号是本网络时，路由器将检查子网号，向相应的子网转发此分组</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>IP</code>地址的扩展——构造超网</p>
-<ul>
-<li>从网络号中借用一部分作为主机号</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>CIDR</code></p>
-<ul>
-<li>最长前缀匹配<ul>
-<li>使用<code>CIDR</code>时，路由表中的每个项目由“网络前缀”和“下一跳地址”组成，在查找路由表时可能得到不止一个匹配结果</li>
-<li>网络前缀越长，启迪之快就越小，因而路由越具体</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>DHCP</code>协议——动态主机配置协议</p>
-<ul>
-<li>工作在<strong>应用层</strong></li>
-<li><code>IP</code>地址请求过程（全广播）<ul>
-<li>主机广播“<code>DHCP</code>发现”报文</li>
-<li><code>DHCP</code>服务器使用“<code>DHCP</code>提供”报文应答</li>
-<li>主机使用“<code>DHCP</code>请求”报文请求<code>IP</code>地址</li>
-<li><code>DHCP</code>服务器使用“<code>DHCP ACK</code> ”报文响应</li>
-</ul>
-</li>
-<li><code>DHCP</code>除获取<code>IP</code>地址外，还能获取<strong>网关地址、<code>DNS</code>地址、子网掩码</strong></li>
-</ul>
-</li>
-<li><p><code>NAT</code>协议</p>
-<ul>
-<li>动机：本地网络只需要使用一个<code>IP</code>地址就可以与外部网络相连</li>
-<li>实现<ul>
-<li>发送数据报：将每个外出报文的<strong>源<code>IP</code>地址，端口号</strong>替换为**<code>NAT IP</code>地址以及新的端口号**</li>
-<li>记住每一个地址转换对</li>
-<li>接收数据报：根据<code>NAT</code>转换表将每个进入报文的<code>NAT IP</code>地址，端口号替换为相应的源<code>IP</code>地址以及端口号</li>
-</ul>
-</li>
-<li>三种地址转换方式<ul>
-<li>静态<code>NAT</code></li>
-<li>动态<code>NAT</code></li>
-<li>端口<code>NAT</code></li>
-</ul>
-</li>
-<li>属于<strong>网络层</strong>协议</li>
-</ul>
-</li>
-<li><p><code>ICMP</code>：因特网控制报文协议</p>
-<ul>
-<li>用于主机、路由器、网关之间交换网络层信息<ul>
-<li>错误报告：如住家、网络、端口、协议不可达等</li>
-<li>回声请求/回答（用于<code>ping</code>程序）</li>
-</ul>
-</li>
-<li>网络层协议</li>
-</ul>
-</li>
-</ul>
-<h1 id="第五章-网络层—控制平面"><a href="#第五章-网络层—控制平面" class="headerlink" title="第五章 网络层—控制平面"></a>第五章 网络层—控制平面</h1><h2 id="路由选择算法"><a href="#路由选择算法" class="headerlink" title="路由选择算法"></a>路由选择算法</h2><ul>
-<li><p>几个概念</p>
-<ul>
-<li>默认路由器：一台主机“直接”连接到的路由器</li>
-<li>源路由器：源主机的默认路由器</li>
-<li>目的路由器：目的主机的默认路由器</li>
-</ul>
-</li>
-<li><p>选路算法的目的</p>
-<ul>
-<li>给定一组路由器以及连接路由器的链路，从这找出一条从源路由器到目标路由器“好的”路径</li>
-</ul>
-</li>
-<li><p>选路算法的分类</p>
-<ul>
-<li><p>根据信息是全局性的还是分散式的进行分类</p>
-<ul>
-<li><p>全局选路算法</p>
-<p>所有路由器都知道整个网络拓扑图以及链路的费用信息</p>
-<p><strong>链路状态算法</strong></p>
-</li>
-<li><p>分散式选路算法</p>
-<p>每个路由器仅有与其相连链路的费用信息</p>
-<p><strong>距离向量算法</strong></p>
-</li>
-</ul>
-</li>
-<li><p>根据信息是静态的还是动态的进行分类</p>
-<ul>
-<li><p>静态选路算法</p>
-<p>随着时间的流逝，路由变换非常缓</p>
-</li>
-<li><p>动态选路算法</p>
-<p>路由信息周期性的更新</p>
-</li>
-</ul>
-</li>
-<li><p>根据是否对负载敏感进行分类</p>
-<ul>
-<li>负载敏感算法</li>
-<li>负载迟钝算法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>迪杰斯特拉算法——链路状态算法</p>
-<ul>
-<li><code>OSPF</code>协议——链路状态协议<ul>
-<li>使用迪杰斯特拉算法</li>
-</ul>
-</li>
-<li>在哪一层有争议</li>
-</ul>
-</li>
-<li><p>距离向量算法</p>
-<ul>
-<li>好消息传的快</li>
-<li>坏消息传的慢</li>
-</ul>
-</li>
-<li><p>层次路由</p>
-<ul>
-<li>将路由器聚合到一个区域——<strong>自治系统(<code>AS</code>)</strong><ul>
-<li>在相同<code>AS</code>内的路由器可全部运行同样的选路算法</li>
-<li>一般使用<code>OSPF</code>协议（或<code>RIP</code>协议）</li>
-<li>在不同的<code>AS</code>内可以使用不同的选路算法</li>
-</ul>
-</li>
-<li>转发表是由<code>AS</code>内部选路算法和<code>AS</code>间选路算法共同决定的<ul>
-<li><code>AS</code>内部选路算法为内部目的地址设置转发表信息</li>
-<li><code>AS</code>内部选路算法和<code>AS</code>间选路算法共同为外部目的地址设置转发表信息</li>
-</ul>
-</li>
-<li>因特网上的<code>AS</code>内层次路由——层次<code>OSPF</code><ul>
-<li>为了使<code>OSPF</code>能够用于规模很大的网络，<code>OSPF</code>将一个自制系统再划分为若干个更小的范围，叫做区域</li>
-<li>划分区域的好处是将利用洪泛法交换链路信息的范围局限于每一个区域而不是整个自治系统，这就减少了整个网络上的通信量</li>
-<li><code>OSPF</code>使用层次结构的区域划分，在上层的区域叫作主干区域</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>因特网上的<code>AS</code>间路由——<code>BGP(边界网关协议)</code></p>
-<ul>
-<li>每一个自治系统的管理员要选择至少一个路由作为该自治系统的“<code>BGP</code>发言人”</li>
-<li>使用<code>TCP</code>，因此是<strong>应用层</strong>协议</li>
-<li><code>BGP</code>路由通告<ul>
-<li><code>AS2</code>可以聚合多个前缀为一个，并使用<code>BGP</code>向<code>AS1</code>通告单一前缀，则<code>AS2</code>承诺它将沿着朝向该前缀的路径，转发指向该前缀的任何数据报</li>
-<li>当路由器通告一个前缀时，它随着前缀包含一些<code>BGP</code>属性</li>
-<li>两个重要属性<ul>
-<li><code>AS-PATH</code>：该属性包含了前缀的通告已经经过的那些<code>AS</code></li>
-<li><code>NEXT-HOP</code>：指明到下一跳<code>AS</code>的具体的路由器</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>BGP</code>路由选择<ul>
-<li>一台路由器可能知道一条前缀的多条路由路径，路由器必须在可能的路由中选择一条</li>
-<li>消除规则<ul>
-<li>本地偏好值</li>
-<li>最短<code>AS-PATH</code>：在余下的路由中，具有最短<code>AS-PATH</code>的路由将被选择</li>
-<li>从余下的路由中，选择具有最靠近<code>NEXT-HOP</code>路由器的路由：热土豆路由</li>
-<li>如果仍余下多条路由，该路由器使用<code>BGP</code>标识以选择路由</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="第六章-链路层和局域网"><a href="#第六章-链路层和局域网" class="headerlink" title="第六章 链路层和局域网"></a>第六章 链路层和局域网</h1><h2 id="链路层概述"><a href="#链路层概述" class="headerlink" title="链路层概述"></a>链路层概述</h2><ul>
-<li>术语<ul>
-<li>节点：主机和路由器</li>
-<li>链路：沿着通信路径连接相邻节点的通信信道<ul>
-<li>有线链路</li>
-<li>无线链路</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>链路层的主要功能<ul>
-<li>负责将数据报通过链路从一个节点传输到物理上相邻的节点</li>
-</ul>
-</li>
-<li>链路层提供的服务<ul>
-<li>成帧<ul>
-<li>将数据加上头部和尾部，封装成数据帧</li>
-<li>帧头部用<code>MAC</code>地址标识源和目的</li>
-</ul>
-</li>
-<li>链路接入<ul>
-<li>共享介质的信道访问</li>
-</ul>
-</li>
-<li>可靠交付</li>
-</ul>
-</li>
-<li>差错检测和纠正</li>
-<li>流量控制</li>
-<li>发送方和接收方<ul>
-<li>发送方<ul>
-<li>在一个帧内封装数据报</li>
-<li>增加差错检测位，可靠交付，流量检测</li>
-</ul>
-</li>
-<li>接收方<ul>
-<li>查找错误，可靠交付，流量控制</li>
-<li>取出数据报，交给网络层</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="差错检测和纠正技术"><a href="#差错检测和纠正技术" class="headerlink" title="差错检测和纠正技术"></a>差错检测和纠正技术</h2><ul>
-<li>奇偶校验</li>
-<li>因特网检查和</li>
-<li>循环冗余校验码(<code>CRC</code>)<ul>
-<li><code>D*2^r</code>除以<code>G</code>，得到余数<code>R</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="多路访问链路和协议"><a href="#多路访问链路和协议" class="headerlink" title="多路访问链路和协议"></a>多路访问链路和协议</h2><ul>
-<li><p>两种链路</p>
-<ul>
-<li>点到点链路<ul>
-<li><code>PPP</code>、<code>HDLC</code></li>
-</ul>
-</li>
-<li>广播链路（贡献链路或介质）<ul>
-<li>传统以太网</li>
-<li>802.11无线LAN</li>
-<li><code>HFC</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>广播链路的特点</p>
-<ul>
-<li>单个共享广播信道</li>
-<li>两个或多个节点同时传输：相互干扰</li>
-</ul>
-</li>
-<li><p>多路访问协议</p>
-<ul>
-<li><p>信道划分协议：将信道划分成小的“片”</p>
-<ul>
-<li><code>TDMA</code><ul>
-<li>循环访问信道，每个节点在每次循环中得到固定长度的时隙</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229111057712.png" alt="image-20211229111057712"></li>
-</ul>
-</li>
-<li><code>FDMA</code><ul>
-<li>信道按频谱分成若干频段</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229111137570.png" alt="image-20211229111137570"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>随机接入协议：信道没有被划分，允许碰撞</p>
-<ul>
-<li><p>当节点有数据时</p>
-<ul>
-<li>以信道全部速率<code>R</code>传输</li>
-<li>没有主节点起协调作用</li>
-</ul>
-</li>
-<li><p>协议举例</p>
-<ul>
-<li>ALOHA、时隙ALOHA</li>
-<li><code>CSMA</code>、<code>CSMA/CD</code>、<code>CSMA/CA</code></li>
-</ul>
-</li>
-<li><p><code>CSMA</code></p>
-<ul>
-<li><p>非坚持<code>CSMA</code></p>
-<p>一旦监听到信道忙就不再监听下去，而是根据协议的算法延迟一个随机的时间后重新再监听</p>
-</li>
-<li><p>时隙非坚持<code>CSMA</code></p>
-<p>规定只能在每个时隙开始时传输帧</p>
-</li>
-<li><p>1坚持<code>CSMA</code></p>
-<p>若信道正忙，则持续监听直到空闲</p>
-</li>
-<li><p>P坚持<code>CSMA</code></p>
-</li>
-</ul>
-</li>
-<li><p><code>CSMA/CD</code></p>
-<ul>
-<li><p>强化碰撞</p>
-<p>当发送数据的站一旦发现了碰撞，除了立即停止发送外，还要继续发送若干比特的人为干扰信号</p>
-<p>拥塞信号：<code>48bit</code></p>
-</li>
-<li><p><strong>争用期</strong></p>
-<ul>
-<li>最先发送数据帧的站，在发送数据帧后至多经过时间<code>2t</code>（两倍的端到端往返时延），就可以知道发送的数据帧是否遭受了碰撞</li>
-<li>以太网端到端往返时延<code>2t</code>被称为争用期</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229112733511.png" alt="image-20211229112733511"></li>
-</ul>
-</li>
-<li><p><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229112122332.png" alt="image-20211229112122332"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>轮流协议：节点轮流传送，但数据量大的节点轮流时间更长</p>
-<ul>
-<li>轮询协议</li>
-<li>令牌传递协议</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="交换局域网"><a href="#交换局域网" class="headerlink" title="交换局域网"></a>交换局域网</h2><ul>
-<li>链路层寻址和<code>ARP</code><ul>
-<li><code>MAC</code>地址<ul>
-<li>在数据链路层标识每块网络适配器，使得能够在广播信道上寻址目标节点</li>
-<li><code>48bit</code></li>
-</ul>
-</li>
-<li><code>ARP</code>协议<ul>
-<li>根据目标的<code>IP</code>地址获取其<code>MAC</code>地址</li>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229112548785.png" alt="image-20211229112548785"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>信号编码<ul>
-<li>曼彻斯特编码<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229112922234-16407485643571.png" alt="image-20211229112922234"></li>
-</ul>
-</li>
-<li>差分曼彻斯特<ul>
-<li><img src="/2022/03/09/%E8%AE%A1%E7%BD%91Note/image-20211229113027981.png" alt="image-20211229113027981"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>交换机的自学习</li>
-</ul>
-<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><ul>
-<li>协议<ul>
-<li><code>DCHP</code>——应用层，使用<code>UDP</code></li>
-<li><code>BGP</code>——应用层，使用<code>TCP</code></li>
-<li><code>ICMP</code>——网络层</li>
-<li><code>ARP</code>——网络层</li>
 </ul>
 </li>
 </ul>
@@ -1820,7 +1071,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhusuwen.github.io/2022/03/09/%E8%AE%A1%E7%BD%91Note/">http://zhusuwen.github.io/2022/03/09/%E8%AE%A1%E7%BD%91Note/</a>
+                    <a href="http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/">http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1858,8 +1109,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
-                                    <span class="chip bg-color">计网</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -1911,13 +1162,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/03/10/pyNote/">
+                <a href="/2022/03/10/goNote/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="pyNote">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="goNote">
                         
-                        <span class="card-title">pyNote</span>
+                        <span class="card-title">goNote</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1945,8 +1196,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/go/">
+                        <span class="chip bg-color">go</span>
                     </a>
                     
                 </div>
@@ -1960,13 +1211,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/09/osNote/">
+                <a href="/2022/03/10/pyNote/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="osNote">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="pyNote">
                         
-                        <span class="card-title">osNote</span>
+                        <span class="card-title">pyNote</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1977,7 +1228,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-10
                             </span>
                         <span class="publish-author">
                             
@@ -1994,8 +1245,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/os/">
-                        <span class="chip bg-color">os</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
