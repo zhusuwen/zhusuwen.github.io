@@ -821,7 +821,7 @@ Password:aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraa
 <p>（一个P对应一个参数，在使用了某个函数后需要使用POP指令将其参数从栈中弹出）</p>
 <pre><code>ropper --file ./stack | grep "pop" | grep "ret"
 </code></pre>
-<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420194932505.png!%5Bimage-20220420195013287%5D(ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195013287.png" alt="image-20220420194932505"></p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195013287.png" alt="image-20220420195013287"></p>
 <p>这是这几个gadget在程序中的<strong>偏移地址</strong>，在使用时需要加上程序加载的基地址。</p>
 <h2 id="获取lib加载地址"><a href="#获取lib加载地址" class="headerlink" title="获取lib加载地址"></a>获取lib加载地址</h2><p>在<code>pwndbg</code>中使用<code>print</code></p>
 <p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195237389.png" alt="image-20220420195237389"></p>
