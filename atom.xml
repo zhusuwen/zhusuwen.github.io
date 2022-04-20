@@ -6,7 +6,7 @@
   <link href="http://zhusuwen.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhusuwen.github.io/"/>
-  <updated>2022-03-10T01:34:30.686Z</updated>
+  <updated>2022-04-20T12:20:38.022Z</updated>
   <id>http://zhusuwen.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://zhusuwen.github.io/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/"/>
+    <id>http://zhusuwen.github.io/2022/04/20/ret2libc%E5%A4%9A%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/</id>
+    <published>2022-04-20T12:23:57.448Z</published>
+    <updated>2022-04-20T12:20:38.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;实验环境&quot;&gt;&lt;a href=&quot;#实验环境&quot; class=&quot;headerlink&quot; title=&quot;实验环境&quot;&gt;&lt;/a&gt;实验环境&lt;/h1&gt;&lt;h2 id=&quot;操作系统-amp-工具&quot;&gt;&lt;a href=&quot;#操作系统-amp-工具&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>goNote</title>
